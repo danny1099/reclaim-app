@@ -4,17 +4,17 @@ import { cn } from "@/shared/utils";
 interface Props {
   className?: string;
   classNamePicture?: string;
-  withText?: boolean;
+  showBrand?: boolean;
 }
 
-export const Logo = ({ withText, className }: Props) => {
+export const Logo = ({ showBrand, className }: Props) => {
   return (
     <div className="flex size-fit items-center gap-1.5">
       <picture className={cn("size-8 shrink-0", className)}>
         <source srcSet="/images/app-logo-dark.svg" media="(prefers-color-scheme: dark)" />
         <img src="/images/app-logo.svg" alt="Logo of reclaim" className="size-full object-contain" loading="eager" />
       </picture>
-      {withText && <Brand />}
+      {showBrand && <Brand />}
     </div>
   );
 };

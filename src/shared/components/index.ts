@@ -25,6 +25,8 @@ export * from "./lang";
 export * from "./loader";
 export * from "./logo";
 export * from "./modal";
+export * from "./navbar";
+export * from "./navlink";
 export * from "./popover";
 export * from "./progress";
 export * from "./search-box";

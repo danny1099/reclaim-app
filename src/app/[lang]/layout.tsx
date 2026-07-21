@@ -1,7 +1,8 @@
 import type { Metadata } from "next";
 import { ViewTransition } from "react";
 import { globalFont } from "@/config/fonts";
-import { ThemeProvider, I18nProvider, TrpcProvider } from "@/lib/providers";
+import { ThemeProvider, I18nProvider, TrpcProvider, ModalProvider } from "@/lib/providers";
+import { Toaster, TooltipProvider } from "@/shared/components";
 import "@/globals.css";
 
 interface RootLayoutProps extends Children {
@@ -16,9 +17,14 @@ export default async function RootLayout({ children, params }: Readonly<RootLayo
       <body className="flex min-h-full flex-col">
         <I18nProvider>
           <ThemeProvider>
-            <TrpcProvider>
-              <ViewTransition>{children}</ViewTransition>
-            </TrpcProvider>
+            <TooltipProvider>
+              <TrpcProvider>
+                <ModalProvider>
+                  <ViewTransition>{children}</ViewTransition>
+                </ModalProvider>
+              </TrpcProvider>
+              <Toaster />
+            </TooltipProvider>
           </ThemeProvider>
         </I18nProvider>
       </body>
