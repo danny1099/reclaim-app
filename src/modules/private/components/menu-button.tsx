@@ -1,5 +1,6 @@
 "use client";
 import { Sheet, SheetContent, SheetTitle, SheetTrigger } from "@/shared/components/sheet";
+import { Menu } from "@/modules/private/components";
 import { Button } from "@/shared/components";
 
 export const MenuButton = () => {
@@ -10,6 +11,7 @@ export const MenuButton = () => {
       </SheetTrigger>
       <SheetContent side="left" aria-describedby="">
         <SheetTitle />
+        <Menu />
       </SheetContent>
     </Sheet>
   );

@@ -21,7 +21,7 @@ export const MenuLink = ({ children, route, icon, className }: Props) => {
         icon={icon}
         placement="start"
         variant="navlink"
-        className={cn("w-full font-normal pl-4", isSelected &&  "bg-accent text-foreground font-medium",className)}
+        className={cn("w-full font-normal pl-4", isSelected &&  "bg-tertiary/10 dark:bg-tertiary/15 text-tertiary font-medium",className)}
       >
         {children}
       </Navlink>

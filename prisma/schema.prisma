@@ -26,8 +26,15 @@ model User {
   createdAt        DateTime @default(now())
   updatedAt        DateTime @updatedAt
 
-  sessions Session[]
-  accounts Account[]
+  sessions            Session[]
+  accounts            Account[]
+  brand               Brand[]
+  gatewayConnections  GatewayConnection[]
+  subscribers         Subscriber[]
+  paymentFailedEvents PaymentFailedEvent[]
+  recoverySequences   RecoverySequence[]
+  recoveryEmailCopies RecoveryEmailCopy[]
+  recoveryEmails      RecoveryEmail[]
 
   @@unique([email])
   @@map("user")
@@ -81,4 +88,200 @@ model Verification {
 
   @@index([identifier])
   @@map("verification")
+}
+
+model Brand {
+  id           String   @id @default(cuid())
+  name         String
+  slug         String   @unique
+  description  String?
+  logo         String?
+  voice        String?
+  subs_ammount String?
+  userId       String   @unique
+  createdAt    DateTime @default(now())
+  updatedAt    DateTime @updatedAt
+
+  user User @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  gatewayConnections  GatewayConnection[]
+  recoverySequences   RecoverySequence[]
+  paymentFailedEvents PaymentFailedEvent[]
+  subscribers         Subscriber[]
+  recoveryEmailCopies RecoveryEmailCopy[]
+  recoveryEmails      RecoveryEmail[]
+
+  @@index([slug])
+  @@index([userId])
+  @@map("brand")
+}
+
+enum Gateway {
+  STRIPE
+  MERCADOPAGO
+}
+
+model GatewayConnection {
+  id                String    @id @default(cuid())
+  userId            String
+  brandId           String
+  paymentAccountId  String    @unique
+  gateway           Gateway
+  accessToken       String
+  refreshToken      String?
+  webhookEndpointId String?
+  webhookSecret     String?
+  isActive          Boolean   @default(true)
+  connectedAt       DateTime  @default(now())
+  disconnectedAt    DateTime?
+
+  user  User   @relation(fields: [userId], references: [id], onDelete: Cascade)
+  brand Brand? @relation(fields: [brandId], references: [id], onDelete: Cascade)
+
+  @@index([paymentAccountId])
+  @@map("gateway_connection")
+}
+
+model Subscriber {
+  id              String   @id @default(cuid())
+  userId          String
+  brandId         String
+  payerCustomerId String?
+  gateway         Gateway
+  email           String
+  name            String?
+  createdAt       DateTime @default(now())
+  updatedAt       DateTime @updatedAt
+
+  user  User  @relation(fields: [userId], references: [id], onDelete: Cascade)
+  brand Brand @relation(fields: [brandId], references: [id])
+
+  recoverySequences RecoverySequence[]
+
+  @@unique([userId, payerCustomerId])
+  @@index([userId])
+  @@map("subscriber")
+}
+
+enum SequenceStatus {
+  ACTIVE
+  RECOVERED
+  FAILED
+  CANCELLED
+}
+
+enum FailureReason {
+  CARD_DECLINED
+  INSUFFICIENT_FUNDS
+  EXPIRED_CARD
+  INCORRECT_CVC
+  PROCESSING_ERROR
+  UNKNOWN
+}
+
+model PaymentFailedEvent {
+  id             String        @id @default(cuid())
+  userId         String
+  brandId        String
+  subscriberId   String?
+  gateway        Gateway
+  gatewayEventId String        @unique
+  invoiceId      String
+  amount         Int
+  currency       String
+  failureReason  FailureReason @default(UNKNOWN)
+  failureMessage String?
+  rawPayload     Json
+  processedAt    DateTime      @default(now())
+
+  user  User  @relation(fields: [userId], references: [id])
+  brand Brand @relation(fields: [brandId], references: [id])
+
+  recoverySequence RecoverySequence[]
+
+  @@index([userId])
+  @@index([invoiceId])
+  @@map("payment_failed_event")
+}
+
+model RecoverySequence {
+  id                   String         @id @default(cuid())
+  userId               String
+  brandId              String
+  subscriberId         String
+  paymentFailedEventId String         @unique
+  gateway              Gateway
+  gatewayInvoiceId     String
+  amountFailed         Int
+  currency             String
+  status               SequenceStatus @default(ACTIVE)
+  emailsSent           Int            @default(0)
+  lastEmailSentAt      DateTime?
+  recoveredAt          DateTime?
+  failedAt             DateTime?
+  cancelledAt          DateTime?
+  triggerRunId         String?
+  cardUpdateToken      String         @unique @default(cuid())
+  cardUpdateUrl        String?
+  cardUpdateClickedAt  DateTime?
+  createdAt            DateTime       @default(now())
+  updatedAt            DateTime       @updatedAt
+
+  user                User                @relation(fields: [userId], references: [id])
+  subscriber          Subscriber          @relation(fields: [subscriberId], references: [id])
+  paymentFailedEvent  PaymentFailedEvent  @relation(fields: [paymentFailedEventId], references: [id])
+  brand               Brand               @relation(fields: [brandId], references: [id])
+  recoveryEmailCopies RecoveryEmailCopy[]
+  recoveryEmails      RecoveryEmail[]
+
+  @@unique([userId, gatewayInvoiceId])
+  @@index([userId, status])
+  @@index([subscriberId])
+  @@index([cardUpdateToken])
+  @@map("recovery_sequence")
+}
+
+model RecoveryEmailCopy {
+  id            String   @id @default(cuid())
+  userId        String
+  brandId       String
+  sequenceId    String
+  dayVariant    Int
+  subject       String
+  bodyHtml      String   @db.Text
+  bodyText      String   @db.Text
+  generatedByAI Boolean  @default(true)
+  promptTokens  Int?
+  outputTokens  Int?
+  createdAt     DateTime @default(now())
+
+  sequence RecoverySequence @relation(fields: [sequenceId], references: [id], onDelete: Cascade)
+  user     User             @relation(fields: [userId], references: [id])
+  brand    Brand            @relation(fields: [brandId], references: [id])
+
+  @@unique([sequenceId, dayVariant])
+  @@map("recovery_email_copy")
+}
+
+model RecoveryEmail {
+  id            String    @id @default(cuid())
+  userId        String
+  brandId       String
+  sequenceId    String
+  dayVariant    Int
+  resendId      String?   @unique
+  sentAt        DateTime  @default(now())
+  openedAt      DateTime?
+  clickedAt     DateTime?
+  bounced       Boolean   @default(false)
+  bouncedAt     DateTime?
+  bouncedReason String?
+
+  sequence RecoverySequence @relation(fields: [sequenceId], references: [id], onDelete: Cascade)
+  user     User             @relation(fields: [userId], references: [id])
+  brand    Brand            @relation(fields: [brandId], references: [id])
+
+  @@unique([sequenceId, dayVariant])
+  @@index([resendId])
+  @@map("recovery_email")
 }
