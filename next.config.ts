@@ -1,7 +1,12 @@
 import type { NextConfig } from "next";
+import createNextIntlPlugin from "next-intl/plugin";
 
+const withNextIntl = createNextIntlPlugin({ requestConfig: "./src/lib/i18n/config/request.ts" });
 const nextConfig: NextConfig = {
-  /* config options here */
+  reactCompiler: true,
+  experimental: {
+    optimizePackageImports: ["@/shared/**/*", "@/modules/**/*"],
+  },
 };
 
-export default nextConfig;
+export default withNextIntl(nextConfig);
