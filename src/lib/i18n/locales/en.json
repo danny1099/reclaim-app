@@ -361,6 +361,10 @@
 
   "onboarding": {
     "title": "Onboarding",
-    "description": "Everything you need to recover and retain recurring revenue."
+    "description": "Everything you need to recover and retain recurring revenue.",
+    "metadata": {
+      "title": "Onboarding",
+      "description": "Welcome to Reclaim, let’s get started by creating your account."
+    }
   }
 }

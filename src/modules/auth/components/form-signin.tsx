@@ -27,7 +27,7 @@ export const FormSignIn = () => {
   /* get routes to navigate and redirect */
   const redirectToSignUp = getPublicRoute("get_started");
   const redirectToForgotPassword = getPublicRoute("forgot_password");
-  const redirectTo = getPrivateRoute("onboarding");
+  const redirectTo = getPrivateRoute("overview");
 
   const form = useForm<SignInSchema>({
     resolver: zodResolver(signInSchema),
