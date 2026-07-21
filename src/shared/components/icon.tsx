@@ -23,6 +23,8 @@ export const iconName = {
   arrow_up: "arrow-up",
   arrow_up_right: "arrow-up-right",
   arrow_down_right: "arrow-down-right",
+  caret_down: "caret-down",
+  caret_up: "caret-up",
   check: "check2",
   chevron_down: "chevron-down",
   chevron_left: "chevron-left",
