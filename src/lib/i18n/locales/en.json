@@ -273,12 +273,29 @@
       "continue-button": "Continue with Email",
       "cancel-button": "Cancel"
     },
-    "metadata": {}
+    "verify_email": {
+      "title": "Welcome to Reclaim",
+      "intro": "Recover revenue. Reduce churn. Keep growth moving. ✨",
+      "body": "Reclaim helps you automatically recover failed payments, reduce involuntary churn, and keep your subscriptions flowing without adding friction to your customers.",
+      "description": "Before you get started, there’s just one quick step left:",
+      "text_token_link": "Verify your email to activate your account.",
+      "explanation": "Once verified, you’ll be ready to connect your billing stack, automate recovery workflows, and start reclaiming lost revenue in real time.",
+      "disclaimer": "If you didn’t create this account, you can safely ignore this message.",
+      "outro": "See you inside,",
+      "brand_sign": "The Reclaim Team",
+      "footer": "Built for modern subscription businesses.",
+      "rights_reserved": "All rights reserved."
+    },
+    "metadata": {
+      "title": "Get Started",
+      "description": "Get started with Reclaim - the SaaS solution for recovering failed payments."
+    }
   },
   "sign_in": {
     "title": "Track it. Grow it.",
     "description": "Sign in to monitor recoveries, revenue, and subscription health.",
     "last_method": "Last used",
+    "or": "or continue with",
     "navigate": {
       "text": "Don’t have an account yet?",
       "link": "Sign up"
@@ -290,7 +307,10 @@
       "cancel-button": "Cancel"
     },
     "forgot-password": "Forgot password?",
-    "metadata": {}
+    "metadata": {
+      "title": "Sign In",
+      "description": "Sign in to your Reclaim account and start recovering failed payments."
+    }
   },
   "forgot_password": {
     "title": "Reset it. Stay secure.",
@@ -322,6 +342,20 @@
         "title": "Set your password",
         "subtitle": "Set and confirm your new password to continue"
       }
+    },
+    "reset_email": {
+      "title": "Reset your password",
+      "body": "Use the one-time verification code below to continue securely.",
+      "expire_time": "This code expires in 5 minutes.",
+      "disclaimer": "If you didn’t request this password reset, you can safely ignore this email. Your account remains protected.",
+      "outro": "Securely yours,",
+      "brand_sign": "The Reclaim Team",
+      "footer": "Built for modern subscription businesses.",
+      "rights_reserved": "All rights reserved."
+    },
+    "metadata": {
+      "title": "Forgot Password",
+      "description": "Forgot your password? Don't worry, we got you."
     }
   },
 

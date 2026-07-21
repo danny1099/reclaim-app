@@ -16,10 +16,10 @@ export const Toaster = ({ ...props }: ToasterProps) => {
       options={{
         duration: 5000,
         roundness: 16,
-        fill: fillColor,
+        fill: "#171717",
         styles: {
           title: "text-xs! font-semibold!",
-          description: "text-2xs! font-normal! text-muted-foreground! darK:text-white/90!",
+          description: "text-2xs! font-normal! text-white/80!",
         },
       }}
     />

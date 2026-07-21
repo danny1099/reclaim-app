@@ -7,9 +7,9 @@ interface Props {
   child?: React.ReactNode;
   className?: string;
   options?: {
-    logo: boolean;
-    brand: boolean;
-    redirect: boolean;
+    logo?: boolean;
+    brand?: boolean;
+    redirect?: boolean;
   };
 }
 
