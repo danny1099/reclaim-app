@@ -62,6 +62,7 @@ export const iconName = {
   inbox: "inbox",
   password: "key",
   shield: "shield-lock",
+  building: "building",
 };
 
 export type IconName = keyof typeof iconName;

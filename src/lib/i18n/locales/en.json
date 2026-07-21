@@ -247,6 +247,13 @@
     "select_file": "Select an image from your device",
     "no_file_selected": "No image selected, please select one"
   },
+  "avatar": {
+    "title": "Make it yours",
+    "description": "Choose an avatar that reflects you style.",
+    "select_from_computer": "Or select from your computer",
+    "select_file": "Select an image file",
+    "no_file_selected": "No image selected"
+  },
 
   "menu": {
     "platform": "Platform",
@@ -362,6 +369,29 @@
   "onboarding": {
     "title": "Onboarding",
     "description": "Everything you need to recover and retain recurring revenue.",
+    "avatar_picker": {
+      "title": "Choose an avatar that reflects you style.",
+      "upload_from_device": "Or click the camera icon to upload a photo."
+    },
+    "steps": {
+      "current": "Step {step} of 6",
+      "account": {
+        "title": "Tell us about yourself.",
+        "subtitle": "Customize your profile so that Reclaim and your subscribers know who you are."
+      },
+      "brand": {
+        "title": "Build your brand",
+        "subtitle": "Define the name and logo that will appear in the recovery emails sent to your subscribers."
+      }
+    },
+    "form": {
+      "name": { "label": "Full name", "placeholder": "Ej. Martina García" },
+      "email": { "label": "Email", "placeholder": "Your email address you used to create the Reclaim account" },
+      "brand": { "label": "Brand", "placeholder": "Ej. Reclaim AI, Acme, Dale" },
+      "continue": "Continue with the onboarding",
+      "submit-button": "Set up my account",
+      "previous": "Go back"
+    },
     "metadata": {
       "title": "Onboarding",
       "description": "Welcome to Reclaim, let’s get started by creating your account."

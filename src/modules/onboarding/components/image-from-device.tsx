@@ -5,12 +5,11 @@ import { Button } from "@/shared/components/button";
 import { cn, imageToBase64 } from "@/shared/utils";
 
 interface Props {
-  children?: React.ReactNode;
   imageUrl: (url: string) => void;
   className?: string;
 }
 
-export const ImageFromDevice = ({ children, imageUrl, className }: Props) => {
+export const ImageFromDevice = ({ imageUrl, className }: Props) => {
   const fileInputRef = useRef<HTMLInputElement>(null);
   const toast = useToast();
 
@@ -38,14 +37,13 @@ export const ImageFromDevice = ({ children, imageUrl, className }: Props) => {
 
   return (
     <div className="relative flex size-fit flex-col items-center">
-      {children}
       <label htmlFor="avatar-upload" className="flex w-full flex-row items-center gap-2">
         <Button
           type="button"
-          variant="tertiary"
+          variant="accent"
           size="icon"
           icon="camera"
-          className={cn("absolute right-0 -bottom-2 size-6 rounded-full", className)}
+          className={cn("size-9 rounded-full", className)}
           onClick={() => fileInputRef.current?.click()}
         />
         <input
