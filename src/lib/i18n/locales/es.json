@@ -1,0 +1,635 @@
+{
+  "validation": {
+    "required": "Este campo es obligatorio",
+    "invalid_email": "Ingresa una dirección de email válida",
+    "invalid_password_required": "La contraseña es obligatoria",
+    "invalid_password": "La contraseña debe tener al menos 8 caracteres",
+    "invalid_name": "El nombre debe tener al menos 3 caracteres",
+    "invalid_last_name": "El apellido debe tener al menos 3 caracteres",
+    "invalid_otp": "Ingresa un código de verificación válido"
+  },
+  "messages": {
+    "account_created": {
+      "title": "Cuenta creada",
+      "content": "Bienvenido a Reclaim. En un momento recibirás un email para verificar tu cuenta."
+    },
+    "account_not_found": {
+      "title": "Cuenta no encontrada",
+      "content": "No pudimos encontrar esta cuenta."
+    },
+    "async_validation_not_supported": {
+      "title": "Validación no soportada",
+      "content": "Este método de validación no está soportado."
+    },
+    "callback_url_required": {
+      "title": "Redirección necesaria",
+      "content": "Se requiere un destino de redirección para continuar."
+    },
+    "credential_account_not_found": {
+      "title": "Cuenta no vinculada",
+      "content": "No pudimos encontrar una cuenta vinculada para esta acción."
+    },
+    "cross_site_navigation_login_blocked": {
+      "title": "Acción bloqueada",
+      "content": "Esta solicitud no pudo completarse por razones de seguridad."
+    },
+    "email_already_verified": {
+      "title": "Email ya verificado",
+      "content": "Gracias por confirmar tu cuenta de Reclaim. Ya puedes continuar."
+    },
+    "email_can_not_be_updated": {
+      "title": "El email no puede actualizarse",
+      "content": "Este email no puede actualizarse en este momento."
+    },
+    "email_mismatch": {
+      "title": "El email no coincide",
+      "content": "El email no coincide con el que esperábamos."
+    },
+    "email_not_verified": {
+      "title": "Email no verificado",
+      "content": "Parece que tu email aún no ha sido verificado. No te preocupes, te enviaremos otro."
+    },
+    "failed_to_create_session": {
+      "title": "Sesión no iniciada",
+      "content": "No pudimos iniciar tu sesión. Inténtalo de nuevo."
+    },
+    "failed_to_create_user": {
+      "title": "Cuenta no creada",
+      "content": "Algo salió mal al crear tu cuenta. Intentémoslo de nuevo."
+    },
+    "failed_to_create_verification": {
+      "title": "Verificación fallida",
+      "content": "No pudimos enviar el email de verificación. Inténtalo en un momento."
+    },
+    "failed_to_get_session": {
+      "title": "Sesión expirada",
+      "content": "Tu sesión ha expirado. Inicia sesión de nuevo para continuar."
+    },
+    "failed_to_get_user_info": {
+      "title": "No pudimos cargar tu cuenta",
+      "content": "No pudimos cargar los detalles de tu cuenta. Inténtalo de nuevo."
+    },
+    "failed_to_unlink_last_account": {
+      "title": "Acción no permitida",
+      "content": "Necesitas al menos un método de inicio de sesión vinculado a tu cuenta."
+    },
+    "failed_to_update_user": {
+      "title": "Cambios no guardados",
+      "content": "No pudimos guardar tus cambios. Inténtalo otra vez."
+    },
+    "field_not_allowed": {
+      "title": "Campo no permitido",
+      "content": "Uno de los campos proporcionados no está permitido."
+    },
+    "id_token_not_supported": {
+      "title": "Inicio de sesión no soportado",
+      "content": "Este método de inicio de sesión no está soportado."
+    },
+    "image-size": {
+      "title": "Imagen demasiado grande",
+      "content": "Tu imagen debe pesar menos de 5MB para que todo siga rápido y fluido."
+    },
+    "image-type": {
+      "title": "Imagen no válida",
+      "content": "Parece que eso no es una imagen que podamos usar. Sube una válida para trabajar con ella."
+    },
+    "invalid_callback_url": {
+      "title": "Redirección no válida",
+      "content": "Este destino de redirección no es válido."
+    },
+    "invalid_email_or_password": {
+      "title": "Revisa tus datos",
+      "content": "Tus credenciales necesitan otra mirada."
+    },
+    "invalid_email": {
+      "title": "Email no válido",
+      "content": "Ese email no se ve bien. Revísalo e inténtalo de nuevo."
+    },
+    "invalid_error_callback_url": {
+      "title": "Redirección no válida",
+      "content": "Este destino de redirección no es válido."
+    },
+    "invalid_new_user_callback_url": {
+      "title": "Redirección no válida",
+      "content": "Este destino de redirección no es válido."
+    },
+    "invalid_origin": {
+      "title": "Solicitud no válida",
+      "content": "Esta solicitud proviene de un origen no válido."
+    },
+    "invalid_otp": {
+      "title": "Código no válido",
+      "content": "Parece que este código de verificación no puede usarse. Intenta pedir uno nuevo."
+    },
+    "invalid_password": {
+      "title": "Revisa tus datos",
+      "content": "Tus credenciales necesitan otra mirada."
+    },
+    "invalid_redirect_url": {
+      "title": "Redirección no válida",
+      "content": "Este destino de redirección no es válido."
+    },
+    "invalid_token": {
+      "title": "Token no válido",
+      "content": "Parece que este código de verificación no puede usarse. Intenta pedir uno nuevo."
+    },
+    "linked_account_already_exists": {
+      "title": "Cuenta ya vinculada",
+      "content": "Parece que esta cuenta ya está vinculada."
+    },
+    "missing_field": {
+      "title": "Información faltante",
+      "content": "Falta un campo obligatorio."
+    },
+    "missing_or_null_origin": {
+      "title": "Solicitud no válida",
+      "content": "A esta solicitud le falta información de seguridad requerida."
+    },
+    "no-params": {
+      "title": "Parámetros faltantes",
+      "content": "Ups, esto necesita algunos parámetros para funcionar correctamente."
+    },
+    "otp_expired": {
+      "title": "Código expirado",
+      "content": "Parece que este código de verificación ha expirado. Intenta pedir uno nuevo."
+    },
+    "otp_resend": {
+      "title": "Código en camino",
+      "content": "Un nuevo código de verificación va en camino a tu bandeja de entrada."
+    },
+    "password_changed": {
+      "title": "Contraseña actualizada",
+      "content": "Contraseña cambiada con éxito. Sigamos adelante ✨"
+    },
+    "password_mismatch": {
+      "title": "Las contraseñas no coinciden",
+      "content": "Hmm... tu contraseña no coincide. Intentémoslo de nuevo."
+    },
+    "password_too_long": {
+      "title": "Contraseña demasiado larga",
+      "content": "Tu contraseña es un poco demasiado larga. Intenta acortarla."
+    },
+    "password_too_short": {
+      "title": "Contraseña demasiado corta",
+      "content": "Tu contraseña es un poco demasiado corta. Agrega algunos caracteres más."
+    },
+    "provider_not_found": {
+      "title": "Opción no disponible",
+      "content": "Esta opción de inicio de sesión no está disponible en este momento."
+    },
+    "session_expired": {
+      "title": "Sesión expirada",
+      "content": "Tu sesión ha expirado. Inicia sesión de nuevo para continuar."
+    },
+    "session_not_fresh": {
+      "title": "La sesión necesita refrescarse",
+      "content": "Por tu seguridad, inicia sesión de nuevo para continuar."
+    },
+    "social_account_already_linked": {
+      "title": "Cuenta social ya vinculada",
+      "content": "Esta cuenta social ya está vinculada."
+    },
+    "unknown_error": {
+      "title": "Algo salió mal",
+      "content": "Hmm... algo inesperado ocurrió. No te preocupes, ya estamos en ello."
+    },
+    "user_already_exists_use_another_email": {
+      "title": "Email ya en uso",
+      "content": "Parece que ya eres parte de nuestra comunidad. Intenta con otro email."
+    },
+    "user_already_exists": {
+      "title": "La cuenta ya existe",
+      "content": "Parece que ya eres parte de nuestra comunidad."
+    },
+    "user_already_has_password": {
+      "title": "Contraseña ya configurada",
+      "content": "Esta cuenta ya tiene una contraseña configurada. Úsala para continuar."
+    },
+    "user_email_not_found": {
+      "title": "Sin cuenta",
+      "content": "Parece que aún no tienes una cuenta. Regístrate."
+    },
+    "user_not_found": {
+      "title": "Usuario no encontrado",
+      "content": "No pudimos encontrar tu cuenta."
+    },
+    "validation_error": {
+      "title": "Revisa tus datos",
+      "content": "Algunos datos necesitan otra mirada."
+    },
+    "verification_email_not_enabled": {
+      "title": "Verificación no disponible",
+      "content": "La verificación por email no está habilitada para esta cuenta."
+    },
+    "unauthorized": {
+      "title": "Acción no permitida",
+      "content": "Parece que no estás autorizado para realizar esta acción. Inténtalo de nuevo."
+    }
+  },
+
+  "lang": {
+    "tooltip": "Idioma",
+    "locales": {
+      "es": "Español",
+      "en": "English"
+    }
+  },
+  "theme": {
+    "tooltip": "Tema",
+    "light": "Claro",
+    "dark": "Oscuro"
+  },
+  "loading": {
+    "title": "Un momento",
+    "description": "Estamos organizando algunas cosas para ti"
+  },
+  "file_picker": {
+    "select_file": "Selecciona una imagen de tu dispositivo",
+    "no_file_selected": "No hay imagen seleccionada, selecciona una"
+  },
+  "avatar": {
+    "title": "Hazlo tuyo",
+    "description": "Elige un avatar que refleje tu estilo.",
+    "select_from_computer": "O selecciona desde tu computadora",
+    "select_file": "Selecciona un archivo de imagen",
+    "no_file_selected": "No hay imagen seleccionada"
+  },
+
+  "menu": {
+    "platform": "Plataforma",
+    "logOut": "Cerrar sesión",
+    "items": {
+      "overview": "Resumen"
+    }
+  },
+  "marketing": {
+    "metadata": {
+      "title": "Pagos fallidos, recuperados en piloto automático",
+      "description": "Reclaim se conecta a tu cuenta de Stripe o MercadoPago, detecta pagos fallidos en tiempo real y recupera suscriptores con emails de IA escritos en tu voz."
+    },
+    "nav": {
+      "sections": "Secciones",
+      "how_it_works": "Cómo funciona",
+      "features": "Funciones",
+      "pricing": "Precios",
+      "faq": "Preguntas",
+      "sign_in": "Iniciar sesión",
+      "get_started": "Empezar"
+    },
+    "hero": {
+      "badge": "Nuevo · Integración nativa con MercadoPago",
+      "title_1": "Pagos fallidos,",
+      "title_highlight": "recuperados",
+      "title_2": "en piloto automático.",
+      "subtitle": "Reclaim se conecta a tu cuenta de Stripe o MercadoPago, detecta pagos fallidos en tiempo real y recupera suscriptores con emails de IA escritos en tu voz. Tú no tocas nada.",
+      "cta_primary": "Empieza a recuperar gratis",
+      "cta_secondary": "Ver cómo funciona",
+      "microcopy": {
+        "no_card": "Plan gratis incluido",
+        "setup": "Configuración en 5 minutos",
+        "cancel": "Cancela cuando quieras"
+      },
+      "visual": {
+        "live": "En vivo",
+        "failed_event": "invoice.payment_failed",
+        "failed_amount": "$49.00 USD",
+        "failed_label": "Pago fallido",
+        "recovered": "Recuperado +$49.00",
+        "email_badge": "IA · tu voz",
+        "ai_note": "Listo para enviar",
+        "webhook_title": "POST /api/webhooks/stripe",
+        "webhook_status": "200 OK · deduplicado",
+        "gateways_title": "Conectado vía OAuth",
+        "days": {
+          "d1": "Día 1",
+          "d3": "Día 3",
+          "d7": "Día 7"
+        },
+        "subjects": {
+          "d1": "«Un pequeño problema con tu pago — no pasa nada»",
+          "d3": "«Tu acceso sigue activo, actualiza tu tarjeta»",
+          "d7": "«Último aviso: conserva tu membresía»"
+        }
+      }
+    },
+    "marquee": {
+      "label": "Se conecta al stack que ya usas",
+      "pills": {
+        "webhooks": "Webhooks en tiempo real",
+        "oauth": "OAuth 2.0 seguro",
+        "multicurrency": "Multi-moneda",
+        "react_email": "React Email",
+        "resend": "Envíos con Resend",
+        "detection": "Detección en menos de 60 s"
+      }
+    },
+    "how": {
+      "eyebrow": "Cómo funciona",
+      "title": "De cargo fallido a ingreso recuperado en tres movimientos",
+      "subtitle": "Sin paneles que vigilar, sin plantillas que escribir. Reclaim ejecuta todo el ciclo de recuperación por ti.",
+      "steps": {
+        "s1": {
+          "title": "Conecta tu gateway",
+          "desc": "OAuth seguro con Stripe o MercadoPago. Registramos los webhooks por ti — sin código, sin configuración manual."
+        },
+        "s2": {
+          "title": "Detectamos el fallo al instante",
+          "desc": "En el momento en que un cargo falla, arranca una secuencia de recuperación: tres emails los días 1, 3 y 7, escritos por IA con la voz de tu marca."
+        },
+        "s3": {
+          "title": "Los suscriptores vuelven",
+          "desc": "Cada email enlaza a una página hospedada donde actualizan su tarjeta en segundos — sin contraseña, sin fricción. Tú solo ves volver los ingresos."
+        }
+      }
+    },
+    "features": {
+      "eyebrow": "Por qué Reclaim",
+      "title": "Todo lo que necesitas para dejar de perder suscriptores",
+      "subtitle": "Hecho para creadores hispanohablantes y pequeños SaaS que cobran con Stripe o MercadoPago.",
+      "cards": {
+        "ai": {
+          "badge": "IA nativa",
+          "title": "Emails en tu voz, no en la nuestra",
+          "desc": "Nada de plantillas genéricas. Claude escribe cada secuencia con el tono de tu marca, nativamente en español, lista para enviar. Puedes previsualizar cada email antes de que salga.",
+          "from": "Martina · Tribu Fitness Pro",
+          "subject": "«Un pequeño problema con tu pago — no pasa nada»",
+          "body": "¡Hola Diego! Tu tarjeta fue rechazada esta vez — tranquilo, los bancos… Tu acceso a Tribu Fitness Pro sigue activo. Si quieres arreglarlo en diez segundos:",
+          "cta": "Actualizar método de pago",
+          "note": "Generado con tu voz · ES"
+        },
+        "safe": {
+          "title": "Seguro por diseño",
+          "desc": "Acceso de solo lectura a lo que importa. Reclaim no puede mover dinero, ver números completos de tarjeta ni tocar tus pagos.",
+          "chips": {
+            "oauth": "OAuth 2.0",
+            "encrypted": "Tokens encriptados",
+            "readonly": "Alcance de solo lectura"
+          }
+        },
+        "realtime": {
+          "title": "Detección en tiempo real",
+          "desc": "Los webhooks de los gateways inician la recuperación en menos de 60 segundos — antes de que tu suscriptor note que algo falló."
+        },
+        "portal": {
+          "title": "Actualización de tarjeta en un toque",
+          "desc": "Un portal hospedado y sin contraseña. Tu suscriptor actualiza su tarjeta en segundos, desde cualquier dispositivo.",
+          "cta": "Actualizar tarjeta"
+        },
+        "gateways": {
+          "title": "Stripe y MercadoPago, nativos",
+          "desc": "La única herramienta de recuperación hecha para LATAM: tarjetas, billeteras y medios de pago locales incluidos."
+        },
+        "brands": {
+          "title": "Multi-marca y multi-moneda",
+          "desc": "Maneja varias comunidades desde una cuenta — cada una con su propia voz, logo y gateway."
+        }
+      }
+    },
+    "stats": {
+      "items": {
+        "recovery": "tasa de recuperación alcanzable",
+        "emails": "emails de IA por secuencia",
+        "setup": "minutos para estar en vivo",
+        "gateways": "gateways de pago nativos"
+      }
+    },
+    "pricing": {
+      "eyebrow": "Precios",
+      "title": "Se paga solo con la primera recuperación",
+      "subtitle": "Empieza gratis y sube de plan cuando tu comunidad crezca. Precios en USD, cancela cuando quieras.",
+      "period": "/mes",
+      "most_popular": "Más popular",
+      "cta": "Empezar",
+      "note": "Recupera un solo pago y el mes ya está pagado.",
+      "plans": {
+        "free": {
+          "name": "Free",
+          "tagline": "Prueba el flujo completo de recuperación",
+          "features": [
+            "1 marca conectada",
+            "Emails de IA en tu voz",
+            "Portal de actualización hospedado",
+            "Soporte de la comunidad"
+          ]
+        },
+        "starter": {
+          "name": "Starter",
+          "tagline": "Hasta 500 suscriptores activos",
+          "features": [
+            "Todo lo de Free",
+            "Webhooks en tiempo real",
+            "Estadísticas de recuperación",
+            "Soporte por email"
+          ]
+        },
+        "growth": {
+          "name": "Growth",
+          "tagline": "Hasta 2,000 suscriptores activos",
+          "features": [
+            "Todo lo de Starter",
+            "Múltiples marcas y voces",
+            "Dominio de envío propio",
+            "Soporte prioritario"
+          ]
+        },
+        "scale": {
+          "name": "Scale",
+          "tagline": "Suscriptores ilimitados",
+          "features": [
+            "Todo lo de Growth",
+            "A/B testing",
+            "Soporte dedicado",
+            "Acceso anticipado a novedades"
+          ]
+        }
+      }
+    },
+    "faq": {
+      "eyebrow": "Preguntas",
+      "title": "Preguntas, respondidas",
+      "subtitle": "Todo lo que los creadores suelen preguntar antes de conectar su gateway.",
+      "items": [
+        {
+          "q": "¿Necesitan acceso a mi cuenta de Stripe o MercadoPago?",
+          "a": "Nos conectamos mediante OAuth seguro. Reclaim puede leer facturas y registrar webhooks en tu cuenta, pero no puede mover dinero, ver números completos de tarjeta ni tocar tus cobros. Puedes desconectar cuando quieras desde tu propio panel."
+        },
+        {
+          "q": "¿Qué pasa si un pago no se recupera?",
+          "a": "Después del tercer email, la secuencia se cierra y te contamos exactamente qué pasó. Si lo activas, Reclaim también puede cancelar la suscripción en tu gateway automáticamente. La última palabra siempre es tuya."
+        },
+        {
+          "q": "¿Los emails de verdad se escriben en español?",
+          "a": "Sí — se escriben nativamente en español con el tono de tu marca, no se traducen de plantillas en inglés. Tus suscriptores leen algo que suena a ti, no a un robot de facturación."
+        },
+        {
+          "q": "¿Mis suscriptores necesitan contraseña para actualizar su tarjeta?",
+          "a": "No. Cada email enlaza a un portal hospedado, seguro y de un solo uso. Tocan, actualizan la tarjeta y vuelven — todo toma menos de un minuto."
+        },
+        {
+          "q": "¿Puedo cancelar cuando quiera?",
+          "a": "Sí. La facturación es mensual y sin permanencia. Desconecta tu gateway y todas las secuencias activas se detienen al instante — nunca se envía un email sin ti."
+        }
+      ]
+    },
+    "cta": {
+      "title": "Tu próximo pago fallido ya está en camino.",
+      "subtitle": "Conecta tu gateway hoy y deja que Reclaim recupere los ingresos que ya ganaste.",
+      "button": "Empieza a recuperar gratis",
+      "microcopy": "Plan gratis · Configuración en 5 minutos · Cancela cuando quieras"
+    },
+    "footer": {
+      "tagline": "Recuperación de pagos fallidos para creadores hispanohablantes y pequeños SaaS.",
+      "columns": {
+        "product": {
+          "title": "Producto",
+          "links": {
+            "how_it_works": "Cómo funciona",
+            "features": "Funciones",
+            "pricing": "Precios",
+            "faq": "Preguntas"
+          }
+        },
+        "access": {
+          "title": "Acceso",
+          "links": {
+            "sign_in": "Iniciar sesión",
+            "get_started": "Empezar"
+          }
+        }
+      },
+      "rights": "© {year} Reclaim. Todos los derechos reservados.",
+      "made_for": "Hecho para creadores que prefieren crear antes que perseguir pagos."
+    }
+  },
+
+  "sign_up": {
+    "title": "Recupéralo. Consérvalo.",
+    "description": "Recupera pagos fallidos antes de que se conviertan en clientes perdidos.",
+    "navigate": {
+      "text": "¿Ya tienes una cuenta?",
+      "link": "Iniciar sesión"
+    },
+    "form": {
+      "email": { "label": "Email", "placeholder": "Ingresa tu dirección de email" },
+      "password": { "label": "Contraseña", "placeholder": "Crea una contraseña segura" },
+      "continue-button": "Continuar con email",
+      "cancel-button": "Cancelar"
+    },
+    "verify_email": {
+      "title": "Bienvenido a Reclaim",
+      "intro": "Recupera ingresos. Reduce el churn. Mantén el crecimiento en marcha. ✨",
+      "body": "Reclaim te ayuda a recuperar pagos fallidos automáticamente, reducir el churn involuntario y mantener tus suscripciones fluyendo sin agregar fricción a tus clientes.",
+      "description": "Antes de empezar, solo queda un paso rápido:",
+      "text_token_link": "Verifica tu email para activar tu cuenta.",
+      "explanation": "Una vez verificado, estarás listo para conectar tu stack de facturación, automatizar los flujos de recuperación y empezar a reclamar ingresos perdidos en tiempo real.",
+      "disclaimer": "Si no creaste esta cuenta, puedes ignorar este mensaje con seguridad.",
+      "outro": "Nos vemos dentro,",
+      "brand_sign": "El equipo de Reclaim",
+      "footer": "Hecho para negocios de suscripción modernos.",
+      "rights_reserved": "Todos los derechos reservados."
+    },
+    "metadata": {
+      "title": "Empezar",
+      "description": "Empieza con Reclaim — la solución SaaS para recuperar pagos fallidos."
+    }
+  },
+  "sign_in": {
+    "title": "Mídelo. Hazlo crecer.",
+    "description": "Inicia sesión para monitorear recuperaciones, ingresos y la salud de tus suscripciones.",
+    "last_method": "Último usado",
+    "or": "o continúa con",
+    "navigate": {
+      "text": "¿Aún no tienes una cuenta?",
+      "link": "Regístrate"
+    },
+    "form": {
+      "email": { "label": "Email", "placeholder": "Ingresa tu dirección de email" },
+      "password": { "label": "Contraseña", "placeholder": "Ingresa tu contraseña" },
+      "continue-button": "Continuar con email",
+      "cancel-button": "Cancelar"
+    },
+    "forgot-password": "¿Olvidaste tu contraseña?",
+    "metadata": {
+      "title": "Iniciar sesión",
+      "description": "Inicia sesión en tu cuenta de Reclaim y empieza a recuperar pagos fallidos."
+    }
+  },
+  "forgot_password": {
+    "title": "Restablécela. Mantente seguro.",
+    "description": "Una nueva contraseña es todo lo que hace falta para seguir con confianza y seguridad.",
+    "step": "Paso {step} de 3",
+    "form": {
+      "email": { "label": "Email", "placeholder": "Ingresa tu dirección de email" },
+      "opt_code": { "label": "Ingresa tu código de verificación aquí", "placeholder": "Este código fue enviado a tu email" },
+      "password": { "label": "Contraseña", "placeholder": "Ingresa tu contraseña" },
+      "confirm-password": { "label": "Confirmar", "placeholder": "Confirma tu nueva contraseña" },
+      "submit-button": "Continuar con el cambio de contraseña",
+      "reset-button": "Restablecer contraseña",
+      "cancel-button": "Cancelar"
+    },
+    "navigate": "Si no estás seguro, volvamos atrás.",
+    "time-left": "Tiempo restante para verificar",
+    "time-out": "Tu tiempo para ingresar el código ha terminado.",
+    "resend-code": "Intentémoslo de nuevo",
+    "steps": {
+      "enter-email": {
+        "title": "Ingresa tu email",
+        "subtitle": "Ingresa el email vinculado a tu cuenta de Reclaim"
+      },
+      "enter-code": {
+        "title": "Revisa tu bandeja de entrada",
+        "subtitle": "Te enviamos un código de verificación para confirmar que eres tú"
+      },
+      "reset-password": {
+        "title": "Configura tu contraseña",
+        "subtitle": "Configura y confirma tu nueva contraseña para continuar"
+      }
+    },
+    "reset_email": {
+      "title": "Restablece tu contraseña",
+      "body": "Usa el código de verificación de un solo uso a continuación para continuar de forma segura.",
+      "expire_time": "Este código expira en 5 minutos.",
+      "disclaimer": "Si no solicitaste este restablecimiento, puedes ignorar este email con seguridad. Tu cuenta sigue protegida.",
+      "outro": "Seguramente tuyo,",
+      "brand_sign": "El equipo de Reclaim",
+      "footer": "Hecho para negocios de suscripción modernos.",
+      "rights_reserved": "Todos los derechos reservados."
+    },
+    "metadata": {
+      "title": "Olvidé mi contraseña",
+      "description": "¿Olvidaste tu contraseña? No te preocupes, te cubrimos."
+    }
+  },
+
+  "onboarding": {
+    "title": "Onboarding",
+    "description": "Todo lo que necesitas para recuperar y retener ingresos recurrentes.",
+    "avatar_picker": {
+      "title": "Elige un avatar que refleje tu estilo.",
+      "upload_from_device": "O haz clic en el ícono de cámara para subir una foto."
+    },
+    "steps": {
+      "current": "Paso {step} de 6",
+      "account": {
+        "title": "Sobre ti.",
+        "subtitle": "Personaliza tu perfil para que Reclaim y tus suscriptores sepan quién eres."
+      },
+      "brand": {
+        "title": "Construye tu marca",
+        "subtitle": "Define el nombre y el logo que aparecerán en los emails de recuperación enviados a tus suscriptores."
+      }
+    },
+    "form": {
+      "name": { "label": "Nombre completo", "placeholder": "Ej. Martina García" },
+      "email": { "label": "Email", "placeholder": "Tu dirección de email con la que creaste la cuenta de Reclaim" },
+      "brand": { "label": "Marca", "placeholder": "Ej. Reclaim AI, Acme, Dale" },
+      "continue": "Continuar con el onboarding",
+      "submit-button": "Configurar mi cuenta",
+      "previous": "Volver"
+    },
+    "metadata": {
+      "title": "Onboarding",
+      "description": "Bienvenido a Reclaim, empecemos creando tu cuenta."
+    }
+  }
+}

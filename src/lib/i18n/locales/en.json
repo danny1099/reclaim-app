@@ -263,8 +263,243 @@
     }
   },
   "marketing": {
-    "title": "Reclaim — Revenue recovery for modern SaaS",
-    "description": "Automatically detect, retry, and recover failed payments. Built for Spanish-speaking content creators and SaaS businesses."
+    "metadata": {
+      "title": "Failed payments, recovered on autopilot",
+      "description": "Reclaim connects to your Stripe or MercadoPago account, detects failed payments in real time, and brings subscribers back with AI emails written in your voice."
+    },
+    "nav": {
+      "sections": "Sections",
+      "how_it_works": "How it works",
+      "features": "Features",
+      "pricing": "Pricing",
+      "faq": "FAQ",
+      "sign_in": "Sign in",
+      "get_started": "Get started"
+    },
+    "hero": {
+      "badge": "New · Native MercadoPago integration",
+      "title_1": "Failed payments,",
+      "title_highlight": "recovered",
+      "title_2": "on autopilot.",
+      "subtitle": "Reclaim connects to your Stripe or MercadoPago account, detects failed payments in real time, and brings subscribers back with AI emails written in your voice. You don’t touch a thing.",
+      "cta_primary": "Start recovering for free",
+      "cta_secondary": "See how it works",
+      "microcopy": {
+        "no_card": "Free plan included",
+        "setup": "5-minute setup",
+        "cancel": "Cancel anytime"
+      },
+      "visual": {
+        "live": "Live",
+        "failed_event": "invoice.payment_failed",
+        "failed_amount": "$49.00 USD",
+        "failed_label": "Payment failed",
+        "recovered": "Recovered +$49.00",
+        "email_badge": "AI · your voice",
+        "ai_note": "Ready to send",
+        "webhook_title": "POST /api/webhooks/stripe",
+        "webhook_status": "200 OK · deduplicated",
+        "gateways_title": "Connected via OAuth",
+        "days": {
+          "d1": "Day 1",
+          "d3": "Day 3",
+          "d7": "Day 7"
+        },
+        "subjects": {
+          "d1": "“A small hiccup with your payment — everything’s fine”",
+          "d3": "“Your access is still active, update your card”",
+          "d7": "“Last notice: keep your membership”"
+        }
+      }
+    },
+    "marquee": {
+      "label": "Plugs into the stack you already use",
+      "pills": {
+        "webhooks": "Real-time webhooks",
+        "oauth": "Secure OAuth 2.0",
+        "multicurrency": "Multi-currency",
+        "react_email": "React Email",
+        "resend": "Resend delivery",
+        "detection": "Detection in under 60 s"
+      }
+    },
+    "how": {
+      "eyebrow": "How it works",
+      "title": "From failed charge to recovered revenue in three moves",
+      "subtitle": "No dashboards to babysit, no templates to write. Reclaim runs the whole recovery loop for you.",
+      "steps": {
+        "s1": {
+          "title": "Connect your gateway",
+          "desc": "Secure OAuth with Stripe or MercadoPago. We register the webhooks for you — no code, no manual setup."
+        },
+        "s2": {
+          "title": "We detect the failure instantly",
+          "desc": "The moment a charge fails, a recovery sequence starts: three emails on days 1, 3 and 7, written by AI in your brand’s voice."
+        },
+        "s3": {
+          "title": "Subscribers come back",
+          "desc": "Each email links to a hosted page where they update their card in seconds — no password, no friction. You just watch revenue return."
+        }
+      }
+    },
+    "features": {
+      "eyebrow": "Why Reclaim",
+      "title": "Everything you need to stop losing subscribers",
+      "subtitle": "Built for Spanish-speaking creators and small SaaS who bill with Stripe or MercadoPago.",
+      "cards": {
+        "ai": {
+          "badge": "AI native",
+          "title": "Emails in your voice, not ours",
+          "desc": "No generic templates. Claude writes each sequence with your brand’s tone, natively in Spanish, ready to send. You can preview every email before it goes out.",
+          "from": "Martina · Tribu Fitness Pro",
+          "subject": "“A small hiccup with your payment — everything’s fine”",
+          "body": "Hi Diego! Your card was declined this time — it happens, banks… Your access to Tribu Fitness Pro is still active. If you want to fix it in ten seconds:",
+          "cta": "Update payment method",
+          "note": "Generated with your voice · ES"
+        },
+        "safe": {
+          "title": "Secure by design",
+          "desc": "Read-only access to what matters. Reclaim can’t move money, see full card numbers, or touch your payouts.",
+          "chips": {
+            "oauth": "OAuth 2.0",
+            "encrypted": "Encrypted tokens",
+            "readonly": "Read-only scope"
+          }
+        },
+        "realtime": {
+          "title": "Real-time detection",
+          "desc": "Gateway webhooks start recovery in under 60 seconds — before your subscriber even notices something failed."
+        },
+        "portal": {
+          "title": "One-tap card update",
+          "desc": "A hosted, passwordless portal. Your subscriber fixes their card in seconds, from any device.",
+          "cta": "Update card"
+        },
+        "gateways": {
+          "title": "Stripe & MercadoPago, natively",
+          "desc": "The only recovery tool built for LATAM: cards, wallets and local payment methods included."
+        },
+        "brands": {
+          "title": "Multi-brand & multi-currency",
+          "desc": "Run several communities from one account — each with its own voice, logo and gateway."
+        }
+      }
+    },
+    "stats": {
+      "items": {
+        "recovery": "achievable recovery rate",
+        "emails": "AI emails per sequence",
+        "setup": "minutes to go live",
+        "gateways": "native payment gateways"
+      }
+    },
+    "pricing": {
+      "eyebrow": "Pricing",
+      "title": "It pays for itself with the first recovery",
+      "subtitle": "Start free and upgrade when your community grows. Prices in USD, cancel anytime.",
+      "period": "/month",
+      "most_popular": "Most popular",
+      "cta": "Get started",
+      "note": "Recover a single payment and the month is already paid for.",
+      "plans": {
+        "free": {
+          "name": "Free",
+          "tagline": "Try the full recovery flow",
+          "features": [
+            "1 connected brand",
+            "AI emails in your voice",
+            "Hosted card-update portal",
+            "Community support"
+          ]
+        },
+        "starter": {
+          "name": "Starter",
+          "tagline": "Up to 500 active subscribers",
+          "features": [
+            "Everything in Free",
+            "Real-time webhooks",
+            "Recovery analytics",
+            "Email support"
+          ]
+        },
+        "growth": {
+          "name": "Growth",
+          "tagline": "Up to 2,000 active subscribers",
+          "features": [
+            "Everything in Starter",
+            "Multiple brands & voices",
+            "Custom sender domain",
+            "Priority support"
+          ]
+        },
+        "scale": {
+          "name": "Scale",
+          "tagline": "Unlimited subscribers",
+          "features": [
+            "Everything in Growth",
+            "A/B testing",
+            "Dedicated support",
+            "Early access to new features"
+          ]
+        }
+      }
+    },
+    "faq": {
+      "eyebrow": "FAQ",
+      "title": "Questions, answered",
+      "subtitle": "Everything creators usually ask before connecting their gateway.",
+      "items": [
+        {
+          "q": "Do you need access to my Stripe or MercadoPago account?",
+          "a": "We connect through secure OAuth. Reclaim can read invoices and register webhooks in your account, but it can’t move money, see full card numbers, or touch your payouts. You can disconnect anytime from your own dashboard."
+        },
+        {
+          "q": "What happens if a payment isn’t recovered?",
+          "a": "After the third email, the sequence closes and we tell you exactly what happened. If you enable it, Reclaim can also cancel the subscription in your gateway automatically. You always keep the final say."
+        },
+        {
+          "q": "Are the emails really written in Spanish?",
+          "a": "Yes — written natively in Spanish with your brand’s tone, not translated from English templates. Your subscribers read something that sounds like you, not like a billing robot."
+        },
+        {
+          "q": "Do my subscribers need a password to update their card?",
+          "a": "No. Each email links to a secure, one-time hosted portal. They tap, update the card, and they’re back — the whole thing takes under a minute."
+        },
+        {
+          "q": "Can I cancel whenever I want?",
+          "a": "Yes. Billing is monthly with no lock-in. Disconnect your gateway and every active sequence stops immediately — no emails are ever sent without you."
+        }
+      ]
+    },
+    "cta": {
+      "title": "Your next failed payment is already on its way.",
+      "subtitle": "Connect your gateway today and let Reclaim recover the revenue you already earned.",
+      "button": "Start recovering for free",
+      "microcopy": "Free plan · 5-minute setup · Cancel anytime"
+    },
+    "footer": {
+      "tagline": "Failed payment recovery for Spanish-speaking creators and small SaaS.",
+      "columns": {
+        "product": {
+          "title": "Product",
+          "links": {
+            "how_it_works": "How it works",
+            "features": "Features",
+            "pricing": "Pricing",
+            "faq": "FAQ"
+          }
+        },
+        "access": {
+          "title": "Access",
+          "links": {
+            "sign_in": "Sign in",
+            "get_started": "Get started"
+          }
+        }
+      },
+      "rights": "© {year} Reclaim. All rights reserved.",
+      "made_for": "Made for creators who’d rather create than chase payments."
+    }
   },
 
   "sign_up": {
@@ -376,7 +611,7 @@
     "steps": {
       "current": "Step {step} of 6",
       "account": {
-        "title": "Tell us about yourself.",
+        "title": "About you.",
         "subtitle": "Customize your profile so that Reclaim and your subscribers know who you are."
       },
       "brand": {

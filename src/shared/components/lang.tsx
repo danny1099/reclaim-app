@@ -17,6 +17,10 @@ export const LangToggle = () => {
       locale: "en",
       name: t("locales.en"),
     },
+    {
+      locale: "es",
+      name: t("locales.es"),
+    },
   ];
 
   const handleChangeLang = (newLang: string) => {

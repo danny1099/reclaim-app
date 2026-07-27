@@ -18,7 +18,7 @@ export function AccordionItem({ className, ...props }: React.ComponentProps<type
   return (
     <AccordionPrimitive.Item
       data-slot="accordion-item"
-      className={cn("data-open:bg-muted/50 not-last:border-b", className)}
+      className={cn("data-[state=open]:bg-muted/50 not-last:border-b", className)}
       {...props}
     />
   );
@@ -40,8 +40,14 @@ export function AccordionTrigger({
         {...props}
       >
         {children}
-        <Icon name="caret_down" className="pointer-events-none shrink-0 group-aria-expanded/accordion-trigger:hidden" />
-        <Icon name="caret_up" className="pointer-events-none hidden shrink-0 group-aria-expanded/accordion-trigger:inline" />
+        <Icon
+          name="chevron_down"
+          className="pointer-events-none size-3 shrink-0 group-aria-expanded/accordion-trigger:hidden"
+        />
+        <Icon
+          name="chevron_up"
+          className="pointer-events-none hidden size-3 shrink-0 group-aria-expanded/accordion-trigger:inline"
+        />
       </AccordionPrimitive.Trigger>
     </AccordionPrimitive.Header>
   );
@@ -55,7 +61,7 @@ export function AccordionContent({
   return (
     <AccordionPrimitive.Content
       data-slot="accordion-content"
-      className="data-open:animate-accordion-down data-closed:animate-accordion-up overflow-hidden px-4 text-sm"
+      className="data-[state=open]:animate-accordion-down data-[state=closed]:animate-accordion-up overflow-hidden px-4 text-sm"
       {...props}
     >
       <div

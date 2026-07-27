@@ -102,3 +102,318 @@ body {
   animation: none;
   mix-blend-mode: normal;
 }
+
+/* ————————————————————————————————————————
+   Marketing experience layer
+   Motion system: GPU-only (transform/opacity),
+   synchronized via shared 9s sequence timeline.
+———————————————————————————————————————— */
+
+@media (prefers-reduced-motion: no-preference) {
+  html {
+    scroll-behavior: smooth;
+  }
+}
+
+::selection {
+  background: var(--tertiary);
+  color: var(--tertiary-foreground);
+}
+
+/* Hairline blueprint grid — adapts to theme through --border */
+@utility bg-grid {
+  background-image:
+    linear-gradient(to right, var(--border) 1px, transparent 1px),
+    linear-gradient(to bottom, var(--border) 1px, transparent 1px);
+  background-size: 56px 56px;
+}
+
+/* Fades the horizontal edges of a strip (marquee) */
+@utility mask-fade-x {
+  mask-image: linear-gradient(to right, transparent, black 14%, black 86%, transparent);
+}
+
+/* Ambient float for product cards — ease-in-out for on-screen movement */
+@utility animate-float {
+  animation: float 7s cubic-bezier(0.77, 0, 0.175, 1) infinite;
+}
+
+@utility animate-float-delayed {
+  animation: float 8.5s cubic-bezier(0.77, 0, 0.175, 1) 1.4s infinite;
+}
+
+/* Slow capability marquee */
+@utility animate-marquee {
+  animation: marquee 36s linear infinite;
+}
+
+/* Recovery-sequence signature timeline (hero) — all synced to 9s */
+@utility animate-seq-dot {
+  animation: seq-dot 9s cubic-bezier(0.45, 0, 0.55, 1) infinite;
+}
+@utility animate-seq-node-1 {
+  animation: seq-node-1 9s ease infinite;
+}
+@utility animate-seq-node-2 {
+  animation: seq-node-2 9s ease infinite;
+}
+@utility animate-seq-node-3 {
+  animation: seq-node-3 9s ease infinite;
+}
+@utility animate-seq-recovered {
+  animation: seq-recovered 9s ease infinite;
+}
+@utility animate-seq-failed {
+  animation: seq-failed 9s ease infinite;
+}
+@utility animate-seq-subject-1 {
+  animation: seq-subject-1 9s ease infinite;
+}
+@utility animate-seq-subject-2 {
+  animation: seq-subject-2 9s ease infinite;
+}
+@utility animate-seq-subject-3 {
+  animation: seq-subject-3 9s ease infinite;
+}
+
+@keyframes float {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-8px);
+  }
+}
+
+@keyframes marquee {
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+/* The dot travels failed → D+1 → D+3 → D+7 and pauses at each node.
+   It animates a full-width wrapper so translateX(%) maps to rail length. */
+@keyframes seq-dot {
+  0% {
+    transform: translateX(0%);
+    opacity: 0;
+  }
+  6% {
+    transform: translateX(0%);
+    opacity: 1;
+  }
+  20%,
+  28% {
+    transform: translateX(33.333%);
+  }
+  45%,
+  53% {
+    transform: translateX(66.666%);
+  }
+  70%,
+  88% {
+    transform: translateX(100%);
+    opacity: 1;
+  }
+  96%,
+  100% {
+    transform: translateX(100%);
+    opacity: 0;
+  }
+}
+
+/* Nodes: neutral → active (solid tertiary) → sent (soft tertiary), reset on loop */
+@keyframes seq-node-1 {
+  0%,
+  18%,
+  100% {
+    background-color: var(--muted);
+    color: var(--muted-foreground);
+    transform: scale(1);
+    box-shadow: 0 0 0 0 transparent;
+  }
+  23%,
+  29% {
+    background-color: var(--tertiary);
+    color: var(--tertiary-foreground);
+    transform: scale(1.15);
+    box-shadow: 0 0 0 6px color-mix(in oklab, var(--tertiary) 18%, transparent);
+  }
+  34%,
+  96% {
+    background-color: color-mix(in oklab, var(--tertiary) 12%, transparent);
+    color: var(--tertiary);
+    transform: scale(1);
+    box-shadow: 0 0 0 0 transparent;
+  }
+}
+
+@keyframes seq-node-2 {
+  0%,
+  43%,
+  100% {
+    background-color: var(--muted);
+    color: var(--muted-foreground);
+    transform: scale(1);
+    box-shadow: 0 0 0 0 transparent;
+  }
+  48%,
+  54% {
+    background-color: var(--tertiary);
+    color: var(--tertiary-foreground);
+    transform: scale(1.15);
+    box-shadow: 0 0 0 6px color-mix(in oklab, var(--tertiary) 18%, transparent);
+  }
+  59%,
+  96% {
+    background-color: color-mix(in oklab, var(--tertiary) 12%, transparent);
+    color: var(--tertiary);
+    transform: scale(1);
+    box-shadow: 0 0 0 0 transparent;
+  }
+}
+
+@keyframes seq-node-3 {
+  0%,
+  68%,
+  100% {
+    background-color: var(--muted);
+    color: var(--muted-foreground);
+    transform: scale(1);
+    box-shadow: 0 0 0 0 transparent;
+  }
+  73%,
+  79% {
+    background-color: var(--tertiary);
+    color: var(--tertiary-foreground);
+    transform: scale(1.15);
+    box-shadow: 0 0 0 6px color-mix(in oklab, var(--tertiary) 18%, transparent);
+  }
+  84%,
+  96% {
+    background-color: color-mix(in oklab, var(--tertiary) 12%, transparent);
+    color: var(--tertiary);
+    transform: scale(1);
+    box-shadow: 0 0 0 0 transparent;
+  }
+}
+
+/* A fresh failed payment arrives — red ring pulse at the start of each loop */
+@keyframes seq-failed {
+  0%,
+  4% {
+    box-shadow: 0 0 0 0 color-mix(in oklab, var(--destructive) 40%, transparent);
+  }
+  14%,
+  100% {
+    box-shadow: 0 0 0 10px transparent;
+  }
+}
+
+/* Recovered badge lands at the end of the rail */
+@keyframes seq-recovered {
+  0%,
+  74%,
+  100% {
+    opacity: 0;
+    transform: translateY(6px) scale(0.96);
+  }
+  81%,
+  93% {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+/* AI subject lines crossfade as each email of the sequence is "sent" */
+@keyframes seq-subject-1 {
+  0%,
+  4% {
+    opacity: 0;
+    transform: translateY(4px);
+  }
+  9%,
+  31% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  35%,
+  100% {
+    opacity: 0;
+    transform: translateY(-4px);
+  }
+}
+
+@keyframes seq-subject-2 {
+  0%,
+  37% {
+    opacity: 0;
+    transform: translateY(4px);
+  }
+  42%,
+  62% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  66%,
+  100% {
+    opacity: 0;
+    transform: translateY(-4px);
+  }
+}
+
+@keyframes seq-subject-3 {
+  0%,
+  68% {
+    opacity: 0;
+    transform: translateY(4px);
+  }
+  73%,
+  93% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  97%,
+  100% {
+    opacity: 0;
+    transform: translateY(-4px);
+  }
+}
+
+/* Reduced motion: keep meaning, drop movement — show the completed state */
+@media (prefers-reduced-motion: reduce) {
+  .animate-marquee,
+  .animate-float,
+  .animate-float-delayed,
+  .animate-seq-failed,
+  .animate-seq-subject-1,
+  .animate-seq-subject-2,
+  .animate-seq-subject-3 {
+    animation: none;
+  }
+
+  .animate-seq-dot {
+    animation: none;
+    opacity: 0;
+  }
+
+  .animate-seq-node-1,
+  .animate-seq-node-2,
+  .animate-seq-node-3 {
+    animation: none;
+    background-color: color-mix(in oklab, var(--tertiary) 12%, transparent);
+    color: var(--tertiary);
+  }
+
+  .animate-seq-recovered {
+    animation: none;
+    opacity: 1;
+    transform: none;
+  }
+
+  .animate-seq-subject-1 {
+    opacity: 1;
+    transform: none;
+  }
+}

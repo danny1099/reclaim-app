@@ -1,23 +1,31 @@
+import { Metadata } from "next";
 import { getTranslations } from "next-intl/server";
-import { Navbar, P, Title, Navlink } from "@/shared/components";
+import { Features, FinalCta, Footer, Hero, HowItWorks, MarketingNav } from "@/modules/marketing/components";
+import { Faq, Pricing, StackMarquee, Stats } from "@/modules/marketing/components";
 
 export default async function Home() {
-  const t = await getTranslations("marketing");
-
   return (
-    <div className="flex h-dvh flex-col">
-      <Navbar />
-      <main className="flex size-full flex-col items-center justify-center text-center">
-        <Title className="font-bold">{t("title")}</Title>
-        <P>{t("description")}</P>
-
-        <div className="mt-5 flex flex-row items-center gap-2">
-          <Navlink href="/auth/sign-in" variant="outline">
-            Sign In
-          </Navlink>
-          <Navlink href="/auth/get-started">Get Started</Navlink>
-        </div>
+    <div id="top" className="flex min-h-dvh flex-col overflow-x-clip">
+      <MarketingNav />
+      <main className="flex-1">
+        <Hero />
+        <StackMarquee />
+        <HowItWorks />
+        <Features />
+        <Stats />
+        <Pricing />
+        <Faq />
+        <FinalCta />
       </main>
+      <Footer />
     </div>
   );
+}
+
+export async function generateMetadata(): Promise<Metadata> {
+  const t = await getTranslations("marketing.metadata");
+  return {
+    title: t("title"),
+    description: t("description"),
+  };
 }

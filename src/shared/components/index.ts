@@ -32,6 +32,7 @@ export * from "./navlink";
 export * from "./popover";
 export * from "./progress";
 export * from "./resizable";
+export * from "./reveal";
 export * from "./search-box";
 export * from "./select";
 export * from "./sheet";
