@@ -7,7 +7,7 @@ const cardClass =
   "group relative flex h-full flex-col gap-3 overflow-hidden rounded-2xl bg-card p-6 ring-1 ring-foreground/10 transition-[transform,box-shadow] duration-300 ease-out hover:-translate-y-1 hover:shadow-[0_16px_40px_-16px_rgba(0,0,0,0.18)] dark:hover:shadow-none dark:hover:ring-foreground/25";
 
 const iconChipClass =
-  "flex size-10 items-center justify-center rounded-xl bg-tertiary/10 text-tertiary ring-1 ring-tertiary/20";
+  "flex size-10 items-center justify-center rounded-full bg-tertiary/20 text-tertiary ring-1 ring-tertiary/20";
 
 const currencies = ["ARS", "MXN", "COP", "CLP", "USD"] as const;
 
@@ -114,7 +114,6 @@ export const Features = async () => {
               </div>
             </article>
           </Reveal>
-
           <Reveal delay={0.08} className="h-full md:col-span-6 lg:col-span-2">
             <article className={cardClass}>
               <span className={iconChipClass}>

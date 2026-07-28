@@ -23,7 +23,6 @@ export const HowItWorks = async () => {
     <section id="how-it-works" className="scroll-mt-20 py-20 md:py-28">
       <div className="mx-auto flex w-full max-w-6xl flex-col gap-12 px-4 md:px-6">
         <SectionHeader eyebrow={t("eyebrow")} title={t("title")} subtitle={t("subtitle")} />
-
         <div className="grid gap-4 md:grid-cols-3">
           {steps.map((step, i) => (
             <Reveal key={step.key} delay={i * 0.08} className="h-full">
@@ -34,7 +33,7 @@ export const HowItWorks = async () => {
                 >
                   {step.index}
                 </span>
-                <span className="bg-tertiary/10 text-tertiary ring-tertiary/20 flex size-10 items-center justify-center rounded-xl ring-1">
+                <span className="bg-tertiary/20 text-tertiary ring-tertiary/20 flex size-10 items-center justify-center rounded-full ring-1">
                   <Icon name={step.icon} className="size-4" />
                 </span>
                 <h3 className="text-base font-semibold tracking-tight">{t(`steps.${step.key}.title`)}</h3>

@@ -13,7 +13,7 @@ export default async function Onboarding() {
 
   return (
     <div className="flex h-dvh flex-col overflow-hidden">
-      <Navbar options={{ logo: true, brand: false }} />
+      <Navbar options={{ brand: false, redirect: false }} />
       <main className="bg-background flex size-full flex-col items-center gap-2 px-4 py-6 md:px-24">
         <OnboardingWizard />
       </main>
