@@ -2,7 +2,7 @@
 import { useTranslations } from "next-intl";
 import { AnimatedContent, IconName, P, Heading } from "@/shared/components";
 import { useOnboardingStore } from "@/modules/onboarding/store";
-import { FormInfo } from "@/modules/onboarding/components";
+import { FormInfo, FormBrand } from "@/modules/onboarding/components";
 
 /* prettier-ignore */
 export const OnboardingWizard = () => {
@@ -26,16 +26,16 @@ export const OnboardingWizard = () => {
   const currentStep = steps[baseStep];
 
   return (
-    <section className="bg-background flex size-full flex-col items-center">
-      <div className="mt-5 flex flex-col justify-center">
+    <section className="bg-background flex size-full flex-col">
+      <div className="mt-10 flex flex-col w-full md:w-110 mx-auto max-sm:px-4">
         <Heading type="h1" className="text-2xl">
           {currentStep.title}
         </Heading>
-        <P>{currentStep.subtitle}</P>
+        <P className="text-pretty">{currentStep.subtitle}</P>
       </div>
-      
       <AnimatedContent className="flex h-fit w-full items-center justify-center">
         {store.currentStep === 1 && <FormInfo />}
+        {store.currentStep === 2 && <FormBrand />}
       </AnimatedContent>
     </section>
   );

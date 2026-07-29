@@ -4,12 +4,12 @@ import { useForm } from "react-hook-form";
 import { useTranslations } from "next-intl";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { useAuth } from "@/modules/auth/hooks";
+import { fallbackAvatar } from "@/shared/utils";
 import { Form, FormControl, FormField, FormItem, FormLabel, FormMessage } from "@/shared/components/form";
 import { Button, Input } from "@/shared/components";
 import { infoUserSchema, type InfoUserSchema } from "@/modules/onboarding/schema";
 import { useOnboardingStore } from "@/modules/onboarding/store";
-import { fallbackAvatar } from "@/shared/utils";
-import { AvatarPicker } from "./avatar-picker";
+import { AvatarPicker } from "@/modules/onboarding/components";
 
 export const FormInfo = () => {
   const { user, isPending } = useAuth();
@@ -70,7 +70,6 @@ export const FormInfo = () => {
                 </FormItem>
               )}
             />
-
             <div className="mt-3 flex h-auto w-full flex-col gap-3 py-2">
               <FormField
                 control={form.control}

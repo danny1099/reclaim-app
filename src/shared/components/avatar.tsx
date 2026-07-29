@@ -26,7 +26,7 @@ export function BaseAvatar({ className, ring = false, withDot = false, withIcon,
       data-ring={ring}
       data-badge={withDot || withIcon ? "true" : "false"}
       className={cn(
-        "group/avatar data-[ring=true]:ring-offset-background relative flex size-8 shrink-0 overflow-hidden rounded-full select-none data-[ring=true]:ring-1 data-[ring=true]:ring-blue-600 data-[ring=true]:ring-offset-2 data-[size=default]:size-8 data-[size=lg]:size-12 data-[size=md]:size-10 data-[size=sm]:size-7 data-[size=xl]:size-16 data-[size=xs]:size-5",
+        "group/avatar data-[ring=true]:ring-offset-background relative flex size-8 shrink-0 overflow-hidden rounded-full select-none data-[ring=true]:ring-1 data-[ring=true]:ring-blue-600 data-[ring=true]:ring-offset-2 data-[size=default]:size-8 data-[size=lg]:size-14 data-[size=md]:size-10 data-[size=sm]:size-7 data-[size=xl]:size-16 data-[size=xs]:size-5",
         className
       )}
       {...props}

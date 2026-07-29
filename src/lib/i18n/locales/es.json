@@ -969,6 +969,11 @@
       "title": "Elige un avatar que refleje tu estilo.",
       "upload_from_device": "O haz clic en el ícono de cámara para subir una foto."
     },
+    "icons_picker": {
+      "title": "Símbolo del logotipo",
+      "upload_from_device": "Or click the camera icon to upload an image",
+      "icon_color": "Color del logotipo"
+    },
     "steps": {
       "current": "Paso {step} de 6",
       "account": {

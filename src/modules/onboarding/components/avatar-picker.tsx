@@ -39,7 +39,7 @@ export const AvatarPicker = ({ url, onImageSelect, className }: AvatarPickerProp
   return (
     <div className={cn("relative mt-3 flex flex-row items-center gap-3", className)}>
       <ImageFromDevice imageUrl={onAvatarSelect}>
-        <Avatar url={selectedImage} size="xl" ring />
+        <Avatar url={selectedImage} size="lg" ring />
       </ImageFromDevice>
       <div className="flex w-full flex-col gap-1">
         <div className="flex w-full flex-col">

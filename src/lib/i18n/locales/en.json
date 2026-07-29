@@ -960,6 +960,11 @@
       "title": "Choose an avatar that reflects you style.",
       "upload_from_device": "Or click the camera icon to upload a photo."
     },
+    "icons_picker": {
+      "title": "Logo symbol",
+      "upload_from_device": "Or click the camera icon to upload an image",
+      "icon_color": "Color of symbol"
+    },
     "steps": {
       "current": "Step {step} of 6",
       "account": {
@@ -974,7 +979,7 @@
     "form": {
       "name": { "label": "Full name", "placeholder": "Ej. Martina García" },
       "email": { "label": "Email", "placeholder": "Your email address you used to create the Reclaim account" },
-      "brand": { "label": "Brand", "placeholder": "Ej. Reclaim AI, Acme, Dale" },
+      "brand": { "label": "Brand name", "placeholder": "Ej. Reclaim AI, Acme, Dale" },
       "continue": "Continue with the onboarding",
       "submit-button": "Set up my account",
       "previous": "Go back"

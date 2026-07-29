@@ -63,6 +63,16 @@ export const iconName = {
   password: "key",
   shield: "shield-lock",
   building: "building",
+  app: "app-indicator",
+  apple: "apple",
+  anthropic: "anthropic",
+  alexa: "alexa",
+  coin: "coin",
+  cup: "cup-hot",
+  feather: "feather",
+  fire: "fire",
+  flower: "flower1",
+  lightning: "lightning-charge",
 };
 
 export type IconName = keyof typeof iconName;

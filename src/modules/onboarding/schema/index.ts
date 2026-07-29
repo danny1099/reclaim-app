@@ -15,5 +15,11 @@ export const infoUserSchema = onboardingSchema.pick({
   email: true,
 });
 
+export const brandSchema = onboardingSchema.pick({
+  brand: true,
+  logo: true,
+});
+
 export type OnboardingSchema = z.infer<typeof onboardingSchema>;
 export type InfoUserSchema = z.infer<typeof infoUserSchema>;
+export type BrandSchema = z.infer<typeof brandSchema>;
