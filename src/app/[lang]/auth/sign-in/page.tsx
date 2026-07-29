@@ -9,7 +9,7 @@ export default async function SignIn() {
   return (
     <section className="flex size-full flex-col items-center">
       <div className="flex h-fit flex-col px-4 pt-10 md:w-1/3">
-        <Title>{t("title")}</Title>
+        <Title className="text-3xl">{t("title")}</Title>
         <P>{t("description")}</P>
       </div>
       <FormSignIn />
