@@ -415,32 +415,17 @@
         "starter": {
           "name": "Starter",
           "tagline": "Hasta 500 suscriptores activos",
-          "features": [
-            "Todo lo de Free",
-            "Webhooks en tiempo real",
-            "Estadísticas de recuperación",
-            "Soporte por email"
-          ]
+          "features": ["Todo lo de Free", "Webhooks en tiempo real", "Estadísticas de recuperación", "Soporte por email"]
         },
         "growth": {
           "name": "Growth",
           "tagline": "Hasta 2,000 suscriptores activos",
-          "features": [
-            "Todo lo de Starter",
-            "Múltiples marcas y voces",
-            "Dominio de envío propio",
-            "Soporte prioritario"
-          ]
+          "features": ["Todo lo de Starter", "Múltiples marcas y voces", "Dominio de envío propio", "Soporte prioritario"]
         },
         "scale": {
           "name": "Scale",
           "tagline": "Suscriptores ilimitados",
-          "features": [
-            "Todo lo de Growth",
-            "A/B testing",
-            "Soporte dedicado",
-            "Acceso anticipado a novedades"
-          ]
+          "features": ["Todo lo de Growth", "A/B testing", "Soporte dedicado", "Acceso anticipado a novedades"]
         }
       }
     },
@@ -489,6 +474,13 @@
             "faq": "Preguntas"
           }
         },
+        "legal": {
+          "title": "Legal",
+          "links": {
+            "terms": "Términos del Servicio",
+            "privacy": "Política de Privacidad"
+          }
+        },
         "access": {
           "title": "Acceso",
           "links": {
@@ -499,6 +491,373 @@
       },
       "rights": "© {year} Reclaim. Todos los derechos reservados.",
       "made_for": "Hecho para creadores que prefieren crear antes que perseguir pagos."
+    }
+  },
+
+  "legal": {
+    "nav": {
+      "terms": "Términos del Servicio",
+      "privacy": "Política de Privacidad",
+      "sign_in": "Iniciar sesión"
+    },
+    "footer": {
+      "tagline": "Recuperación de pagos fallidos para creadores hispanohablantes y pequeños SaaS.",
+      "columns": {
+        "legal": {
+          "title": "Legal",
+          "links": {
+            "terms": "Términos del Servicio",
+            "privacy": "Política de Privacidad"
+          }
+        },
+        "access": {
+          "title": "Acceso",
+          "links": {
+            "home": "Volver al inicio",
+            "get_started": "Empezar"
+          }
+        }
+      },
+      "rights": "© {year} Reclaim. Todos los derechos reservados.",
+      "contact_email": "hola@reclaim.app"
+    },
+    "common": {
+      "on_this_page": "En esta página",
+      "nav_label": "Secciones de este documento",
+      "back_to_top": "Volver arriba",
+      "toc_label_terms": "Secciones de los Términos del Servicio",
+      "toc_label_privacy": "Secciones de la Política de Privacidad",
+      "version": "1.2.0",
+      "last_updated_label": "Última actualización",
+      "effective_label": "Vigente desde",
+      "last_updated_value": "15 de enero de 2026",
+      "effective_value": "15 de enero de 2026"
+    },
+    "terms": {
+      "metadata": {
+        "title": "Términos del Servicio",
+        "description": "El acuerdo que rige tu uso de Reclaim, la plataforma de recuperación de pagos fallidos para creadores y pequeños SaaS."
+      },
+      "eyebrow": "Términos del Servicio",
+      "title": "El acuerdo que mantiene a Reclaim funcionando.",
+      "subtitle": "Estos Términos rigen tu uso de Reclaim, la plataforma de recuperación de pagos fallidos. Los escribimos en lenguaje claro porque los documentos legales no deberían requerir un abogado para leerse, pero te pedimos que los leas con atención. Describen qué puedes esperar de nosotros y qué esperamos nosotros de ti.",
+      "preamble": "Al crear una cuenta o utilizar Reclaim de cualquier manera, aceptas quedar vinculado por estos Términos, nuestra Política de Privacidad y cualquier directriz adicional publicada dentro del producto. Si no estás de acuerdo, no utilices el Servicio.",
+      "sections": [
+        { "id": "definitions", "label": "Definiciones", "number": "01" },
+        { "id": "eligibility", "label": "Elegibilidad y cuenta", "number": "02" },
+        { "id": "service", "label": "El Servicio", "number": "03" },
+        { "id": "subscriptions", "label": "Suscripciones y facturación", "number": "04" },
+        { "id": "acceptable-use", "label": "Uso aceptable", "number": "05" },
+        { "id": "intellectual-property", "label": "Propiedad intelectual", "number": "06" },
+        { "id": "third-party", "label": "Servicios de terceros", "number": "07" },
+        { "id": "data-and-privacy", "label": "Datos y privacidad", "number": "08" },
+        { "id": "ai-features", "label": "Contenido generado por IA", "number": "09" },
+        { "id": "termination", "label": "Suspensión y terminación", "number": "10" },
+        { "id": "liability", "label": "Responsabilidad y garantías", "number": "11" },
+        { "id": "indemnification", "label": "Indemnización", "number": "12" },
+        { "id": "disputes", "label": "Disputas y ley aplicable", "number": "13" },
+        { "id": "changes", "label": "Cambios en estos Términos", "number": "14" },
+        { "id": "contact", "label": "Contacto", "number": "15" }
+      ],
+      "content": {
+        "definitions": {
+          "intro": "Para mantener estos Términos legibles, las siguientes definiciones se aplican a lo largo del documento:",
+          "items": [
+            "«Reclaim», «nosotros» o «nuestro» se refiere a Reclaim Tech S.A.S., la empresa que opera el Servicio.",
+            "«Tú» o «Cliente» se refiere a la persona física o jurídica que crea una cuenta o utiliza el Servicio en nombre de una marca.",
+            "«Servicio» significa la plataforma Reclaim, incluyendo el panel, las secuencias de recuperación, el portal de actualización de tarjeta y cualquier API o integración relacionada.",
+            "«Marca» significa la identidad de cara al cliente (membresía, curso, comunidad) que conectas a Reclaim para su recuperación.",
+            "«Suscriptor» significa un usuario final de tu Marca cuyo pago fallido Reclaim puede ayudarte a recuperar.",
+            "«Pasarela» significa Stripe o MercadoPago: el procesador de pagos al que nos autorizas a leer."
+          ]
+        },
+        "eligibility": {
+          "intro": "Debes tener al menos 18 años y capacidad legal para celebrar un contrato en tu jurisdicción. Si utilizas el Servicio en nombre de una empresa, declaras que tienes autoridad para obligar a esa empresa a estos Términos.",
+          "account": {
+            "title": "Tu cuenta",
+            "body": "Eres responsable de mantener seguras tus credenciales, claves de API y cuentas conectadas. Notifícanos inmediatamente a la dirección indicada en la sección de Contacto si crees que tu cuenta ha sido comprometida. No somos responsables de pérdidas causadas por accesos no autorizados que podrías haber evitado razonablemente."
+          }
+        },
+        "service": {
+          "intro": "Reclaim es una plataforma de software que te ayuda a recuperar pagos fallidos de suscripciones. El Servicio incluye:",
+          "items": [
+            "Conectarse a tu cuenta de Stripe y/o MercadoPago mediante OAuth en alcance de solo lectura.",
+            "Detectar pagos fallidos en tiempo real a través de webhooks registrados en tu cuenta de la Pasarela.",
+            "Generar y enviar hasta tres (3) correos de recuperación por secuencia usando nuestro modelo de IA.",
+            "Alojar un portal de actualización de tarjeta de un solo uso donde tu Suscriptor puede corregir su método de pago.",
+            "Proveer un panel con métricas, registros de recuperación y previsualizaciones de secuencias."
+          ],
+          "note": "Reclaim es una herramienta, no un procesador de pagos. No retenemos, transmitimos ni almacenamos números de tarjeta, y no podemos mover dinero desde o hacia tu cuenta de la Pasarela."
+        },
+        "subscriptions": {
+          "intro": "Reclaim se ofrece bajo suscripción. Al registrarte aceptas pagar las tarifas recurrentes asociadas al plan que elijas.",
+          "items": [
+            "Las tarifas se facturan por adelantado de forma mensual y no son reembolsables, salvo donde la ley aplicable lo exija.",
+            "Tu nivel de plan define los límites aplicables a tu cuenta (por ejemplo, el número máximo de Suscriptores activos o Marcas conectadas).",
+            "Podemos cambiar los precios para futuros ciclos de facturación con al menos 30 días de aviso. Los cambios no afectan al ciclo en curso.",
+            "Puedes cancelar en cualquier momento desde la configuración de tu cuenta. La cancelación surte efecto al final del ciclo de facturación actual.",
+            "Si un cargo a tu tarjeta falla, podemos reintentar el cargo y, tras un período de gracia razonable, degradar tu cuenta al plan Gratuito."
+          ]
+        },
+        "acceptable-use": {
+          "intro": "Aceptas no hacer un uso indebido del Servicio. En particular, no deberás:",
+          "items": [
+            "Usar Reclaim para enviar comunicaciones no solicitadas, engañosas, acosadoras o ilegales a tus Suscriptores.",
+            "Suplantar la identidad de cualquier persona o entidad, ni afirmar falsamente tu afiliación con una persona o entidad.",
+            "Cargar contenido que infrinja derechos de propiedad intelectual, privacidad o cualquier otro derecho de terceros.",
+            "Realizar ingeniería inversa, descompilar o intentar extraer el código fuente del Servicio, salvo lo permitido por la ley.",
+            "Utilizar el Servicio para procesar pagos relacionados con bienes o servicios ilegales, o en violación de sanciones o controles de exportación.",
+            "Interferir o interrumpir la integridad o el rendimiento del Servicio o de los datos contenidos en él."
+          ],
+          "footer": "Podemos investigar cualquier sospecha de incumplimiento y, cuando proceda, suspender o terminar tu acceso sin previo aviso."
+        },
+        "intellectual-property": {
+          "intro": "Mantenemos todos los derechos de propiedad intelectual sobre el Servicio, incluido el software, el diseño, la marca, las marcas registradas y los pesos del modelo de IA utilizados para generar los correos de recuperación. Tu uso del Servicio no transfiere ninguno de esos derechos a ti.",
+          "your_content": {
+            "title": "Tu contenido",
+            "body": "Conservas la propiedad del contenido que subes a Reclaim, incluidos los activos de tu Marca, las guías de voz y los correos de recuperación generados a partir de ellos. Nos otorgas una licencia limitada, mundial y no exclusiva para alojar, procesar, transmitir y mostrar dicho contenido únicamente con el fin de operar el Servicio para ti."
+          }
+        },
+        "third-party": {
+          "intro": "El Servicio depende de proveedores externos, entre ellos: Stripe y MercadoPago para datos de pago, Resend para entrega de correos y Anthropic (Claude) para la generación de correos con IA. El uso que hagas de esos servicios está sujeto a sus propios términos y políticas de privacidad.",
+          "footer": "No somos responsables de la disponibilidad, exactitud o contenido de ningún servicio de terceros. Si un proveedor de terceros deja de funcionar o cambia sus términos de forma que afecte materialmente al Servicio, te avisaremos lo antes posible."
+        },
+        "data-and-privacy": {
+          "intro": "El tratamiento que hacemos de los datos personales se describe en detalle en nuestra Política de Privacidad. En resumen:",
+          "items": [
+            "Tratamos los datos de tu cuenta como responsables de esos datos.",
+            "Cuando tratamos datos de tus Suscriptores en tu nombre para enviar correos de recuperación, actuamos como encargados y tú eres el responsable.",
+            "Nunca vendemos datos personales a terceros.",
+            "Usamos cifrado estándar de la industria en tránsito y en reposo."
+          ],
+          "note": "Al utilizar el Servicio, confirmas que tienes una base legal para compartir los datos de tus Suscriptores con nosotros con el fin de recuperación. Eres responsable de informar a tus Suscriptores sobre este tratamiento (por ejemplo, en tu propia política de privacidad)."
+        },
+        "ai-features": {
+          "intro": "Reclaim utiliza modelos de lenguaje de gran tamaño para redactar los correos de recuperación. La IA trabaja con la voz y el tono de tu Marca, y puedes revisar cada correo antes de que se envíe.",
+          "items": [
+            "La IA puede producir resultados inexactos, incompletos o inapropiados. Eres responsable de revisar el contenido antes de que llegue a tus Suscriptores.",
+            "No utilizamos los datos de tu Marca para entrenar modelos de IA de propósito general. Las entradas y salidas se tratan conforme a nuestra Política de Privacidad.",
+            "Podemos registrar las copias generadas con el único fin de depuración, prevención de abuso y mejora de la fiabilidad del Servicio.",
+            "Si un correo generado viola estos Términos o nuestra política de Uso Aceptable, podemos desactivar la función o secuencia afectada."
+          ]
+        },
+        "termination": {
+          "intro": "Podemos suspender o terminar tu acceso al Servicio en cualquier momento, con o sin causa, con aviso razonable cuando sea posible. Las causas que pueden llevar a la suspensión inmediata incluyen:",
+          "items": [
+            "Impago de tarifas.",
+            "Incumplimiento de estos Términos o de nuestra política de Uso Aceptable.",
+            "Una solicitud tuya, de las fuerzas de seguridad o de una autoridad reguladora.",
+            "Inactividad prolongada de tu cuenta."
+          ],
+          "footer": "Tras la terminación, tu derecho a usar el Servicio finaliza de inmediato. Haremos un esfuerzo razonable por permitirte exportar tus datos antes de su eliminación, salvo que la ley lo prohíba. Las disposiciones de estos Términos que por su naturaleza deban sobrevivir a la terminación lo harán."
+        },
+        "liability": {
+          "intro": "En la máxima medida permitida por la ley, el Servicio se proporciona «tal cual» y «según disponibilidad», sin garantías de ningún tipo, expresas o implícitas, incluidas las garantías de comerciabilidad, idoneidad para un fin particular y no infracción.",
+          "items": [
+            "No garantizamos que el Servicio sea ininterrumpido, esté libre de errores, ni que todo pago fallido sea recuperado.",
+            "No somos responsables de daños indirectos, incidentales, especiales, consecuenciales o punitivos, incluidos el lucro cesante, pérdida de ingresos o de datos.",
+            "Nuestra responsabilidad total acumulada hacia ti por todas las reclamaciones derivadas del Servicio no excederá el mayor de (a) el importe que nos hayas pagado en los doce (12) meses anteriores al hecho que dio lugar a la reclamación, o (b) cien dólares estadounidenses (USD 100).",
+            "Nada en estos Términos limita la responsabilidad que no pueda excluirse conforme a la ley aplicable (por ejemplo, negligencia grave o dolo)."
+          ]
+        },
+        "indemnification": {
+          "intro": "Aceptas indemnizar, defender y mantener indemne a Reclaim, sus directivos, administradores, empleados y agentes de cualquier reclamación, demanda, pérdida, responsabilidad, daño o gasto (incluidos honorarios razonables de abogados) que surja de (a) tu uso del Servicio, (b) tu incumplimiento de estos Términos, o (c) tu incumplimiento de cualquier ley aplicable o derecho de terceros."
+        },
+        "disputes": {
+          "intro": "Estos Términos se rigen por las leyes de la República Argentina, sin consideración a sus principios sobre conflictos de leyes. Cualquier disputa que surja de o en relación con estos Términos estará sujeta a la jurisdicción exclusiva de los tribunales de la Ciudad Autónoma de Buenos Aires, Argentina.",
+          "items": [
+            "Intentaremos primero resolver cualquier disputa de manera informal. Contáctanos a la dirección indicada más abajo y trabajaremos de buena fe durante 30 días.",
+            "Si no logramos resolver la disputa informalmente, aceptas presentar cualquier reclamación ante los tribunales competentes de la Ciudad Autónoma de Buenos Aires, Argentina.",
+            "Nada en esta sección impide a cualquiera de las partes solicitar medidas cautelares para proteger su propiedad intelectual o información confidencial."
+          ]
+        },
+        "changes": {
+          "intro": "Podemos actualizar estos Términos periódicamente. Cuando lo hagamos, revisaremos la fecha de «Última actualización» en la parte superior de esta página y, para cambios materiales, te avisaremos por correo electrónico o a través del panel con al menos 15 días de antelación a la entrada en vigor de los nuevos Términos.",
+          "footer": "Tu uso continuado del Servicio después de la fecha de entrada en vigor constituye la aceptación de los Términos actualizados. Si no estás de acuerdo, puedes dejar de usar el Servicio y cerrar tu cuenta antes de que entren en vigor."
+        },
+        "contact": {
+          "intro": "¿Preguntas sobre estos Términos? Escríbenos y te responderemos.",
+          "items": [
+            "Correo: legal@reclaim.app",
+            "Empresa: Reclaim Tech S.A.S.",
+            "Dirección: Av. Corrientes 1234, C1043 CABA, Argentina"
+          ]
+        }
+      }
+    },
+    "privacy": {
+      "metadata": {
+        "title": "Política de Privacidad",
+        "description": "Cómo Reclaim recoge, utiliza y protege los datos personales de los creadores y sus suscriptores al recuperar pagos fallidos."
+      },
+      "eyebrow": "Política de Privacidad",
+      "title": "Qué hacemos con los datos que confías en nosotros.",
+      "subtitle": "Esta Política de Privacidad explica qué datos personales recoge Reclaim, por qué los recogemos, cómo los usamos y qué derechos tienes sobre ellos. La escribimos en lenguaje claro: la versión corta está arriba, la larga abajo.",
+      "short_version": {
+        "title": "La versión corta",
+        "items": [
+          "Recogemos solo los datos necesarios para recuperar pagos fallidos y operar tu cuenta.",
+          "Nunca vendemos tus datos. A nadie. Jamás.",
+          "Usamos acceso de solo lectura a tu Pasarela. No podemos ver números de tarjeta completos ni mover dinero.",
+          "Tú mantienes el control: exporta o elimina tus datos en cualquier momento desde tu panel.",
+          "Si cambiamos algo importante, te avisaremos por correo antes de que entre en vigor."
+        ]
+      },
+      "sections": [
+        { "id": "scope", "label": "Alcance de esta Política", "number": "01" },
+        { "id": "data-we-collect", "label": "Datos que recogemos", "number": "02" },
+        { "id": "how-we-use", "label": "Cómo usamos tus datos", "number": "03" },
+        { "id": "subscribers", "label": "Datos de Suscriptores (datos en nombre de nuestros clientes)", "number": "04" },
+        { "id": "ai-and-automation", "label": "IA y automatización", "number": "05" },
+        { "id": "sharing", "label": "Con quién compartimos datos", "number": "06" },
+        { "id": "subprocessors", "label": "Subencargados", "number": "07" },
+        { "id": "international", "label": "Transferencias internacionales", "number": "08" },
+        { "id": "retention", "label": "Conservación de datos", "number": "09" },
+        { "id": "security", "label": "Seguridad", "number": "10" },
+        { "id": "your-rights", "label": "Tus derechos", "number": "11" },
+        { "id": "children", "label": "Privacidad de menores", "number": "12" },
+        { "id": "changes", "label": "Cambios en esta Política", "number": "13" },
+        { "id": "contact", "label": "Contacto y DPO", "number": "14" }
+      ],
+      "content": {
+        "scope": {
+          "intro": "Esta Política se aplica a Reclaim Tech S.A.S. («Reclaim», «nosotros»), la plataforma disponible en reclaim.app, y a todos los datos que recogemos cuando visitas nuestro sitio web, creas una cuenta o utilizas el Servicio.",
+          "footer": "Esta Política no se aplica a sitios web, servicios o aplicaciones de terceros a los que puedas acceder a través de Reclaim — por ejemplo, el panel de tu proveedor de Pasarela. Esos servicios se rigen por sus propias políticas de privacidad."
+        },
+        "data-we-collect": {
+          "intro": "Recogemos datos personales de tres formas: datos que nos proporcionas, datos que recibimos de tu Pasarela y datos que recogemos automáticamente cuando utilizas el Servicio.",
+          "categories": {
+            "title": "Categorías de datos",
+            "items": [
+              "Datos de cuenta: tu nombre, dirección de correo, foto de perfil, contraseña (hasheada) y tokens de autenticación.",
+              "Datos de Marca: el nombre, logo, guías de voz y correo de contacto de cada Marca que conectas a Reclaim.",
+              "Datos de facturación: el plan de suscripción que eliges, las facturas emitidas a tu nombre y los últimos cuatro dígitos de la tarjeta registrada con nuestro procesador de pagos.",
+              "Datos de la Pasarela: información limitada de Stripe o MercadoPago que necesitamos para detectar pagos fallidos — por ejemplo, ID de factura, monto, moneda, motivo del fallo, el correo del Suscriptor asociado a la factura fallida y la fecha del evento. No recibimos números de tarjeta completos ni los datos de tu cuenta bancaria.",
+              "Datos de recuperación: las copias de correos generadas por nuestra IA, las marcas de tiempo en que se enviaron, abrieron o clicaron, y el resultado de cada secuencia.",
+              "Datos de uso: registros técnicos básicos (dirección IP, tipo de navegador, sistema operativo, páginas visitadas) recogidos mediante analíticas respetuosas con la privacidad."
+            ]
+          }
+        },
+        "how-we-use": {
+          "intro": "Usamos los datos que recogemos con las siguientes finalidades:",
+          "items": [
+            "Crear y mantener tu cuenta, incluida la autenticación y la seguridad.",
+            "Detectar pagos fallidos en tu Pasarela en tiempo real y ejecutar la secuencia de recuperación que hayas configurado.",
+            "Generar, enviar y rastrear los correos de recuperación en tu nombre, incluido el enlace de actualización de tarjeta.",
+            "Proveerte paneles, analíticas y soporte del producto.",
+            "Mejorar el Servicio — por ejemplo, identificando motivos de fallo recurrentes, depurando integraciones y previniendo abusos.",
+            "Cumplir con nuestras obligaciones legales y responder a solicitudes legítimas de las autoridades."
+          ],
+          "legal_basis": {
+            "title": "Base legal",
+            "body": "Cuando la ley aplicable exija una base legal (por ejemplo, el RGPD de la UE o la LGPD de Brasil), nos basamos en: (a) la ejecución de un contrato contigo; (b) nuestro interés legítimo en operar un Servicio seguro y fiable; (c) tu consentimiento, cuando sea necesario; y (d) el cumplimiento de obligaciones legales."
+          }
+        },
+        "subscribers": {
+          "intro": "Cuando conectas una Pasarela a Reclaim, podemos recibir datos personales de tus usuarios finales — tus Suscriptores. Por ejemplo, su dirección de correo, nombre, el monto y la fecha de un pago fallido, y metadatos sobre cómo interactúan con el correo de recuperación y el portal de actualización de tarjeta.",
+          "controller": {
+            "title": "Roles: tú eres el responsable, nosotros somos el encargado",
+            "body": "Para los datos de Suscriptores, tú actúas como responsable del tratamiento y Reclaim como encargado del tratamiento (o proveedor de servicios, en algunas jurisdicciones). Esto significa que:",
+            "items": [
+              "Tú decides por qué y cómo se tratan los datos de los Suscriptores, incluida la base legal bajo tu propia política de privacidad.",
+              "Eres responsable de informar a tus Suscriptores sobre este tratamiento y, cuando sea necesario, de obtener su consentimiento.",
+              "Tratamos los datos de los Suscriptores solo según tus instrucciones documentadas, tal como se establecen en estos Términos y esta Política, y no los usamos para nuestros propios fines."
+            ]
+          },
+          "obligations": {
+            "title": "Tus obligaciones como responsable",
+            "body": "Al usar Reclaim, confirmas que tienes una base legal para compartir los datos de tus Suscriptores con nosotros con el fin de recuperar pagos fallidos. Te comprometes a:",
+            "items": [
+              "Informar a tus Suscriptores sobre el tratamiento en tu propia política de privacidad.",
+              "Atender cualquier solicitud de exclusión, acceso o eliminación de un Suscriptor, ya sea cumpliéndola tú mismo o contactándonos para que te asistamos.",
+              "No usar Reclaim para enviar correos de recuperación a Suscriptores que hayan solicitado no recibir comunicaciones de marketing o transaccionales tuyas."
+            ]
+          }
+        },
+        "ai-and-automation": {
+          "intro": "Reclaim utiliza IA para redactar los correos de recuperación. Esto es lo que significa para tus datos:",
+          "items": [
+            "Las entradas a la IA incluyen el nombre del Suscriptor, el nombre de la Marca, el motivo del fallo y tus guías de voz. Nunca se comparten datos de tarjeta con el proveedor de IA.",
+            "Ordenamos a nuestro proveedor de IA (Anthropic) que descarte las entradas y salidas tras completar la solicitud, y hemos configurado la integración para que no entrene con tus datos.",
+            "Las copias generadas por la IA se guardan en tu cuenta para que puedas revisarlas antes de que se envíen. Puedes editar, regenerar o desactivar cualquier correo en cualquier momento.",
+            "No permitimos que la IA tome decisiones autónomas con efectos legales sobre los Suscriptores sin tu revisión."
+          ]
+        },
+        "sharing": {
+          "intro": "No vendemos datos personales. Solo compartimos datos con las partes descritas a continuación, y solo lo mínimo necesario para prestar el Servicio:",
+          "items": [
+            "Subencargados que nos ayudan a operar el Servicio (ver lista más abajo).",
+            "Fuerzas de seguridad o reguladores cuando estemos legalmente obligados a hacerlo, o para proteger la seguridad, derechos o bienes de Reclaim, nuestros usuarios o terceros.",
+            "Una entidad sucesora en caso de fusión, adquisición o venta de activos — en cuyo caso te avisaremos antes de que tus datos se transfieran y queden sujetos a una política de privacidad diferente."
+          ]
+        },
+        "subprocessors": {
+          "intro": "Para prestar el Servicio dependemos de los siguientes subencargados. Actualizamos esta lista cada vez que añadimos o eliminamos un proveedor.",
+          "items": [
+            "Stripe — procesamiento de pagos de nuestra propia facturación y proveedor de OAuth para la Pasarela del cliente.",
+            "MercadoPago — proveedor de OAuth para clientes que facturan en LATAM.",
+            "Resend — entrega de correos transaccionales.",
+            "Anthropic (Claude) — generación con IA de las copias de correo de recuperación.",
+            "PostgreSQL en Neon — hosting de la base de datos.",
+            "Upstash Redis — caché y claves de idempotencia.",
+            "Cloudinary — hosting de logos de Marca y recursos subidos.",
+            "Vercel — hosting de la aplicación y red edge."
+          ],
+          "footer": "Cada subencargado está sujeto a términos de tratamiento de datos que limitan el uso de tus datos a los fines que definimos."
+        },
+        "international": {
+          "intro": "Reclaim se opera desde Argentina y puede tratar datos en otros países donde nuestros subencargados mantienen infraestructura. Cuando transferimos datos personales fuera del país en que se recogieron, aplicamos garantías apropiadas — por ejemplo, las Cláusulas Contractuales Tipo de la Comisión Europea o mecanismos equivalentes aprobados por la ley local.",
+          "footer": "Puedes solicitar una copia de las garantías que aplicamos contactando a nuestro DPO en la dirección indicada abajo."
+        },
+        "retention": {
+          "intro": "Conservamos los datos personales solo el tiempo necesario para prestar el Servicio y cumplir con nuestras obligaciones legales.",
+          "items": [
+            "Datos de cuenta: durante la vida de tu cuenta, más 30 días tras la eliminación para permitir la recuperación, y hasta un año para registros fiscales y legales.",
+            "Secuencias de recuperación y correos: 24 meses desde la última actividad, tras lo cual se anonimizan para analíticas.",
+            "Registros de uso: 90 días, salvo que deban conservarse más tiempo por incidentes de seguridad o reclamaciones legales.",
+            "Copias generadas por IA: se conservan con la secuencia y se eliminan con ella."
+          ]
+        },
+        "security": {
+          "intro": "Protegemos los datos personales con medidas técnicas y organizativas diseñadas para evitar accesos no autorizados, pérdidas o divulgaciones. Entre ellas:",
+          "items": [
+            "Cifrado en tránsito (TLS 1.2+) y en reposo (AES-256) para bases de datos y almacenamiento de objetos.",
+            "Cifrado a nivel de aplicación para credenciales sensibles como tokens de acceso a la Pasarela, tokens de refresco y secretos de webhook.",
+            "Control de acceso basado en roles para nuestro equipo, con autenticación de doble factor obligatoria para todo acceso a producción.",
+            "Monitorización continua de los sistemas en producción, escaneos regulares de vulnerabilidades y auditorías de seguridad independientes.",
+            "Procedimientos documentados de respuesta a incidentes: en caso de una brecha de datos personales, notificaremos a los usuarios afectados y a la autoridad competente dentro de los plazos exigidos por la ley."
+          ],
+          "footer": "Ningún sistema es 100% seguro. Si descubres una vulnerabilidad, repórtala a security@reclaim.app y responderemos en menos de 72 horas."
+        },
+        "your-rights": {
+          "intro": "Tienes los siguientes derechos sobre tus datos personales. La mayoría pueden ejercerse directamente desde tu panel; para cualquier otro, contáctanos en la dirección de la sección de Contacto.",
+          "items": [
+            "Acceso — solicitar una copia de los datos personales que tenemos sobre ti.",
+            "Rectificación — corregir cualquier dato inexacto o incompleto.",
+            "Eliminación — solicitar que eliminemos tus datos personales, sujeto a las obligaciones legales de conservación.",
+            "Portabilidad — recibir tus datos en un formato estructurado y legible por máquina.",
+            "Limitación u oposición — pedirnos que limitemos o detengamos determinado tratamiento de tus datos.",
+            "Retirada del consentimiento — cuando el tratamiento se base en tu consentimiento, puedes retirarlo en cualquier momento sin afectar al tratamiento previo.",
+            "Reclamación — presentar una reclamación ante tu autoridad local de protección de datos. No obstante, agradeceríamos la oportunidad de abordar tus preocupaciones antes de que lo hagas."
+          ]
+        },
+        "children": {
+          "intro": "El Servicio no está dirigido a menores de 16 años, y no recogemos conscientemente datos personales de menores. Si crees que un menor nos ha proporcionado datos personales, contáctanos y los eliminaremos lo antes posible."
+        },
+        "changes": {
+          "intro": "Podemos actualizar esta Política periódicamente. Cuando lo hagamos, revisaremos la fecha de «Última actualización» en la parte superior de esta página y, para cambios materiales, te avisaremos por correo electrónico o a través del panel con al menos 15 días de antelación a la entrada en vigor de la nueva Política.",
+          "footer": "Si no estás de acuerdo con la Política actualizada, puedes dejar de usar el Servicio y solicitar la eliminación de tus datos antes de que los cambios entren en vigor."
+        },
+        "contact": {
+          "intro": "Para cualquier pregunta sobre esta Política, para ejercer tus derechos o para contactar a nuestro Delegado de Protección de Datos, escríbenos a:",
+          "items": [
+            "Correo (privacidad): privacy@reclaim.app",
+            "Correo (DPO): dpo@reclaim.app",
+            "Empresa: Reclaim Tech S.A.S.",
+            "Dirección: Av. Corrientes 1234, C1043 CABA, Argentina"
+          ]
+        }
+      }
     }
   },
 

@@ -3,6 +3,8 @@ export const routes = {
     prefix: "/",
     routes: {
       home: "",
+      terms: "terms-of-service",
+      privacy: "policy-of-privacy",
       auth: {
         prefix: "auth",
         routes: {
