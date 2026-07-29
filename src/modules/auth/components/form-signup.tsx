@@ -1,4 +1,5 @@
 "use client";
+import Link from "next/link";
 import { I18nMessage, useTranslations } from "next-intl";
 import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
@@ -6,13 +7,15 @@ import { tryCatch } from "@/shared/utils";
 import { useToast } from "@/shared/hooks";
 import { getPublicRoute } from "@/routes/utils";
 import { Form, FormControl, FormField, FormItem, FormLabel, FormMessage } from "@/shared/components/form";
-import { Input, Button, InputPassword } from "@/shared/components";
+import { Input, Button, InputPassword, P } from "@/shared/components";
 import { AuthWithOauth, FormNavigate } from "@/modules/auth/components";
 import { signUpSchema, type SignUpSchema } from "@/modules/auth/schema";
 import { auth } from "@/modules/auth/client";
 
 export const FormRegister = () => {
   const redirectToSignIn = getPublicRoute("sign_in");
+  const redirectToTerms = getPublicRoute("terms");
+  const redirectToPrivacy = getPublicRoute("privacy");
   const t = useTranslations("sign_up");
   const toast = useToast();
 
@@ -91,6 +94,20 @@ export const FormRegister = () => {
           <FormNavigate redirectTo={redirectToSignIn} text={t("navigate.text")} link={t("navigate.link")} />
         </form>
       </Form>
+      <P className="text-muted-foreground text-3xs m-auto max-w-xs text-center text-pretty">
+        {t.rich("accept_terms_and_privacy", {
+          terms: (chunk) => (
+            <Link className="text-foreground font-medium hover:underline" href={redirectToTerms}>
+              {chunk}
+            </Link>
+          ),
+          policy: (chunk) => (
+            <Link className="text-foreground font-medium hover:underline" href={redirectToPrivacy}>
+              {chunk}
+            </Link>
+          ),
+        })}
+      </P>
     </article>
   );
 };

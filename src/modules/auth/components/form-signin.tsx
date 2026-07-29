@@ -9,7 +9,7 @@ import { tryCatch } from "@/shared/utils";
 import { useToast } from "@/shared/hooks";
 import { getPrivateRoute, getPublicRoute } from "@/routes/utils";
 import { Form, FormControl, FormField, FormItem, FormLabel, FormMessage } from "@/shared/components/form";
-import { Input, Button, InputPassword, Badge } from "@/shared/components";
+import { Input, Button, InputPassword, Badge, P } from "@/shared/components";
 import { AuthWithOauth, FormNavigate } from "@/modules/auth/components";
 import { signInSchema, type SignInSchema } from "@/modules/auth/schema";
 import { auth } from "@/modules/auth/client";
@@ -27,6 +27,8 @@ export const FormSignIn = () => {
   /* get routes to navigate and redirect */
   const redirectToSignUp = getPublicRoute("get_started");
   const redirectToForgotPassword = getPublicRoute("forgot_password");
+  const redirectToTerms = getPublicRoute("terms");
+  const redirectToPrivacy = getPublicRoute("privacy");
   const redirectTo = getPrivateRoute("overview");
 
   const form = useForm<SignInSchema>({
@@ -121,6 +123,20 @@ export const FormSignIn = () => {
           <FormNavigate redirectTo={redirectToSignUp} text={t("navigate.text")} link={t("navigate.link")} />
         </form>
       </Form>
+      <P className="text-muted-foreground text-3xs m-auto max-w-xs text-center text-pretty">
+        {t.rich("accept_terms_and_privacy", {
+          terms: (chunk) => (
+            <Link className="text-foreground font-medium hover:underline" href={redirectToTerms}>
+              {chunk}
+            </Link>
+          ),
+          policy: (chunk) => (
+            <Link className="text-foreground font-medium hover:underline" href={redirectToPrivacy}>
+              {chunk}
+            </Link>
+          ),
+        })}
+      </P>
     </article>
   );
 };

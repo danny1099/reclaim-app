@@ -14,7 +14,7 @@ export const MarketingNav = async () => {
 
   return (
     <header className="border-border/60 bg-background/70 sticky top-0 z-50 backdrop-blur-xl">
-      <div className="mx-auto flex h-16 w-full max-w-6xl items-center justify-between px-4 md:px-6">
+      <div className="mx-auto flex h-16 w-full items-center justify-between px-4 py-2 md:px-24">
         <a href="#top" aria-label="Reclaim" className="shrink-0">
           <Logo showBrand />
         </a>

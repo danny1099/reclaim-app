@@ -672,11 +672,7 @@
         },
         "contact": {
           "intro": "Questions about these Terms? Reach out and we will get back to you.",
-          "items": [
-            "Email: legal@reclaim.app",
-            "Company: Reclaim Tech S.A.S.",
-            "Address: Av. Corrientes 1234, C1043 CABA, Argentina"
-          ]
+          "items": ["Email: legal@reclaim.app", "Company: Reclaim Tech S.A.S.", "Address: Cali, Colombia"]
         }
       }
     },
@@ -849,7 +845,7 @@
             "Email (privacy): privacy@reclaim.app",
             "Email (DPO): dpo@reclaim.app",
             "Company: Reclaim Tech S.A.S.",
-            "Address: Av. Corrientes 1234, C1043 CABA, Argentina"
+            "Address: Cali, Colombia"
           ]
         }
       }
@@ -882,6 +878,7 @@
       "footer": "Built for modern subscription businesses.",
       "rights_reserved": "All rights reserved."
     },
+    "accept_terms_and_privacy": "By signing up you agree to Reclaim's <terms>Terms of service</terms> and <policy>Privacy Policy.</policy>",
     "metadata": {
       "title": "Get Started",
       "description": "Get started with Reclaim - the SaaS solution for recovering failed payments."
@@ -903,6 +900,7 @@
       "cancel-button": "Cancel"
     },
     "forgot-password": "Forgot password?",
+    "accept_terms_and_privacy": "By logging in you accept our <terms>Terms of service</terms> and <policy>Privacy Policy.</policy>",
     "metadata": {
       "title": "Sign In",
       "description": "Sign in to your Reclaim account and start recovering failed payments."

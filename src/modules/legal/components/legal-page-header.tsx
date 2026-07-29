@@ -28,9 +28,7 @@ export const LegalPageHeader = ({
       </div>
       <Reveal className="mx-auto flex w-full max-w-6xl flex-col gap-6 px-4 pt-16 pb-10 md:px-6 md:pt-20 md:pb-12">
         <div className="flex flex-wrap items-center gap-2">
-          <Badge variant="tertiary" className="text-3xs tracking-widest uppercase">
-            {eyebrow}
-          </Badge>
+          <Badge variant="tertiary">{eyebrow}</Badge>
           <span className="text-3xs text-muted-foreground font-mono tabular-nums">v{version}</span>
         </div>
         <Heading type="h1" className="text-3xl leading-[1.05] tracking-[-0.04em] text-balance md:text-5xl md:leading-[1.04]">
