@@ -29,6 +29,7 @@ export const routes = {
         prefix: "main",
         routes: {
           overview: "/overview",
+          connections: "/connections",
         },
       },
     },

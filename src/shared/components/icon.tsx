@@ -74,6 +74,12 @@ export const iconName = {
   flower: "flower1",
   lightning: "lightning-charge",
   sound: "soundwave",
+  node: "node-minus",
+  star: "star",
+  trophy: "trophy",
+  manage: "box-arrow-in-right",
+  dot: "dot",
+  plugin: "plugin",
 };
 
 export type IconName = keyof typeof iconName;

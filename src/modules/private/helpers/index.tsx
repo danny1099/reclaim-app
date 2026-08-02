@@ -20,4 +20,11 @@ export const menuItems: MenuItem[] = [
     place: "main",
     icon: "home",
   },
+  {
+    name: "connections",
+    path: "connections",
+    render: "link",
+    place: "main",
+    icon: "node",
+  },
 ];

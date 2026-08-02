@@ -275,7 +275,8 @@
     "platform": "Plataforma",
     "logOut": "Cerrar sesión",
     "items": {
-      "overview": "Resumen"
+      "overview": "Dashboard",
+      "connections": "Conexiones"
     }
   },
   "marketing": {
@@ -977,7 +978,6 @@
       "description": "¿Olvidaste tu contraseña? No te preocupes, te cubrimos."
     }
   },
-
   "onboarding": {
     "title": "Onboarding",
     "description": "Todo lo que necesitas para recuperar y retener ingresos recurrentes.",
@@ -1040,6 +1040,49 @@
     "metadata": {
       "title": "Onboarding",
       "description": "Bienvenido a Reclaim, empecemos creando tu cuenta."
+    }
+  },
+  "connections": {
+    "title": "Conexiones",
+    "description": "Conecta tus plataformas de pago como Stripe o Mercado Pago y comienza a recuperar pagos fallidos de tus suscriptores; conecta tu cuenta usando tus credenciales.",
+    "cta-button": "Conectar {gateway}",
+    "connect_state": {
+      "title": "Conexión con {gateway}",
+      "description-success": "Tu cuenta con {gateway} se ha conectado correctamente. Ahora puedes empezar a recuperar los pagos fallidos de tus suscriptores.",
+      "description-failed": "No pudimos conectar tu cuenta con {gateway}. Inténtalo de nuevo.",
+      "go_back_button": "Volver a conexiones"
+    },
+    "card": {
+      "stripe": {
+        "name": "Stripe",
+        "description": "Sincronización completa de suscripciones, facturas y eventos de pago fallidos",
+        "outstanding": "Recomendado",
+        "connected": "Conectado",
+        "disconnected": "Desconectado",
+        "powered-by": "Impulsado por",
+        "benefits": {
+          "1": "Detección en tiempo real",
+          "2": "Reintentos automáticos inteligentes",
+          "3": "Información detallada sobre pagos fallidos"
+        }
+      },
+      "mercadopago": {
+        "name": "Mercado Pago",
+        "description": "Integración con el ecosistema de pagos líder en Latinoamérica",
+        "outstanding": "Excepcional",
+        "connected": "Conectado",
+        "disconnected": "Desconectado",
+        "powered-by": "Impulsado por",
+        "benefits": {
+          "1": "Detección en tiempo real de pagos fallidos",
+          "2": "Secuencias con reintentos automáticos",
+          "3": "Información sobre pagos y suscripciones recuperados"
+        }
+      }
+    },
+    "metadata": {
+      "title": "Conexiones",
+      "description": "Conecta tus plataformas de pago como Stripe o Mercado Pago y comienza a recuperar pagos fallidos de tus suscriptores; conecta tu cuenta usando tus credenciales."
     }
   }
 }

@@ -3,11 +3,11 @@ import { redirect } from "next/navigation";
 import { getTranslations } from "next-intl/server";
 import { getPrivateRoute } from "@/routes/utils";
 import { Navbar } from "@/shared/components";
-import { isAuthenticated } from "@/modules/auth/session";
+import { requireAuth } from "@/modules/auth/session";
 import { OnboardingWizard } from "@/modules/onboarding/components";
 
 export default async function Onboarding() {
-  const { user } = await isAuthenticated();
+  const { user } = await requireAuth();
 
   if (user.withOnboarding) redirect(getPrivateRoute("overview"));
 

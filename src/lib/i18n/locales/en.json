@@ -275,7 +275,8 @@
     "platform": "Platform",
     "logOut": "Log out",
     "items": {
-      "overview": "Overview"
+      "overview": "Overview",
+      "connections": "Connections"
     }
   },
   "marketing": {
@@ -968,7 +969,6 @@
       "description": "Forgot your password? Don't worry, we got you."
     }
   },
-
   "onboarding": {
     "title": "Onboarding",
     "description": "Everything you need to recover and retain recurring revenue.",
@@ -1031,6 +1031,50 @@
     "metadata": {
       "title": "Onboarding",
       "description": "Welcome to Reclaim, let’s get started by creating your account."
+    }
+  },
+  "connections": {
+    "title": "Connections",
+    "description": "Connect your payment platforms like Stripe or Mercado Pago and start recovering failed payments from your subscribers; connect your account using your credentials.",
+    "cta-button": "Connect {gateway}",
+    "connect_state": {
+      "title": "Connection to {gateway}",
+      "description-success": "Your account to {gateway} has been connected successfully. You can now start recovering failed payments from your subscribers.",
+      "description-failed": "We couldn't connect your account to {gateway}, please try again.",
+      "go_back_button": "Go back to connections",
+      "description": "Connection confirmation for Reclaim account for recovering failed payments."
+    },
+    "card": {
+      "stripe": {
+        "name": "Stripe",
+        "description": "Full synchronization of subscriptions, invoices, and failed payment events",
+        "outstanding": "Outstanding",
+        "connected": "Connected",
+        "disconnected": "Disconnected",
+        "powered-by": "Powered by",
+        "benefits": {
+          "1": "Real-time detection",
+          "2": "Smart automatic retries",
+          "3": "Detailed information about failed payments"
+        }
+      },
+      "mercadopago": {
+        "name": "Mercado Pago",
+        "description": "Integration with the leading payments ecosystem in Latin America",
+        "outstanding": "Recommended",
+        "connected": "Connected",
+        "disconnected": "Disconnected",
+        "powered-by": "Powered by",
+        "benefits": {
+          "1": "Real-time detection of failed payments",
+          "2": "Sequences with automatic retries",
+          "3": "Information about payments and subscriptions recovered"
+        }
+      }
+    },
+    "metadata": {
+      "title": "Connections",
+      "description": "Connect your payment platforms like Stripe or Mercado Pago and start recovering failed payments from your subscribers; connect your account using your credentials."
     }
   }
 }

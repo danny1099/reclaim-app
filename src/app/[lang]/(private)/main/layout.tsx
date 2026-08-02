@@ -1,8 +1,8 @@
 import { Aside, Navbar, Menu } from "@/modules/private/components";
-import { isAuthenticated } from "@/modules/auth/session";
+import { requireAuth } from "@/modules/auth/session";
 
 export default async function Layout({ children }: { children: React.ReactNode }) {
-  await isAuthenticated();
+  await requireAuth();
 
   return (
     <div className="grid h-dvh grid-cols-[auto_1fr] grid-rows-[auto_1fr] overflow-auto">

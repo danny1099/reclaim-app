@@ -12,7 +12,7 @@ export const getAuthSession = cache(
 );
 
 /* async function to check if user is authenticated and redirect to unauthorized page */
-export const isAuthenticated = cache(async () => {
+export const requireAuth = cache(async () => {
   const authenticated = await getAuthSession();
   const redirectTo = getPublicRoute("sign_in");
 
