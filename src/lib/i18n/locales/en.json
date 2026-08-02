@@ -224,6 +224,22 @@
     "unauthorized": {
       "title": "Action not allowed",
       "content": "It appears that you are not authorized to perform this action. Please try again."
+    },
+    "onboarding_not_completed": {
+      "title": "Onboarding not completed",
+      "content": "Please complete the onboarding process to continue."
+    },
+    "onboarding_completed": {
+      "title": "Onboarding completed",
+      "content": "You have successfully completed the onboarding process. Welcome aboard!"
+    },
+    "onboarding_in_progress": {
+      "title": "Onboarding in progress",
+      "content": "Your onboarding process is still in progress. Please complete it to continue."
+    },
+    "onboarding_brand_already_exists": {
+      "title": "Onboarding brand already exists",
+      "content": "The brand you are trying to create already exists. Please choose a different name."
     }
   },
 

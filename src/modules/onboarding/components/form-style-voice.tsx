@@ -15,17 +15,17 @@ export const FormStyleVoice = () => {
   const form = useForm<StyleVoiceSchema>({
     resolver: zodResolver(styleVoiceSchema),
     defaultValues: {
-      style_voice: store.style_voice || "",
+      style_tone: store.style_tone || "",
     },
   });
 
   const onSubmit = async (data: StyleVoiceSchema) => {
-    store.setStyleVoice(data.style_voice);
+    store.setStyleTone(data.style_tone);
     store.nextStep();
   };
 
   useEffect(() => {
-    if (store.style_voice) form.setValue("style_voice", store.style_voice);
+    if (store.style_tone) form.setValue("style_tone", store.style_tone);
   }, []);
 
   return (
@@ -35,13 +35,13 @@ export const FormStyleVoice = () => {
           <div className="flex h-auto w-full flex-col gap-3 py-2">
             <FormField
               control={form.control}
-              name="style_voice"
+              name="style_tone"
               render={({ field }) => (
                 <FormItem>
                   <FormControl>
                     <VoiceTypePicker value={field.value as string} onChange={field.onChange} />
                   </FormControl>
-                  {form.formState.errors["style_voice"] && <FormMessage />}
+                  {form.formState.errors["style_tone"] && <FormMessage />}
                 </FormItem>
               )}
             />

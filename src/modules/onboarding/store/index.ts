@@ -6,7 +6,7 @@ interface OnboardingState {
   avatar: string;
   brand: string;
   logoUrl: string | undefined;
-  style_voice: string;
+  style_tone: string;
   currentStep: number;
 }
 
@@ -15,7 +15,7 @@ interface OnboardingActions {
   setAvatar: (avatar: string) => void;
   setBrand: (brand: string) => void;
   setLogoUrl: (logoUrl: string) => void;
-  setStyleVoice: (style_voice: string) => void;
+  setStyleTone: (style_tone: string) => void;
   reset: () => void;
   nextStep: () => void;
   prevStep: () => void;
@@ -28,7 +28,7 @@ const initialState: OnboardingState = {
   avatar: "",
   brand: "",
   logoUrl: undefined,
-  style_voice: "",
+  style_tone: "",
   currentStep: 1,
 };
 
@@ -40,7 +40,7 @@ export const useOnboardingStore = create<OnboardingStore>()(
     setAvatar: (avatar: string) => set({ avatar }),
     setBrand: (brand: string) => set({ brand }),
     setLogoUrl: (logoUrl: string) => set({ logoUrl }),
-    setStyleVoice: (style_voice: string) => set({ style_voice }),
+    setStyleTone: (style_tone: string) => set({ style_tone }),
     reset: () => set(initialState),
 
     /* handle next and prev step */

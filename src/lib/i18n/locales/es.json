@@ -224,6 +224,22 @@
     "unauthorized": {
       "title": "Acción no permitida",
       "content": "Parece que no estás autorizado para realizar esta acción. Inténtalo de nuevo."
+    },
+    "onboarding_not_completed": {
+      "title": "Onboarding no completado",
+      "content": "Por favor, completa el proceso de onboarding para continuar."
+    },
+    "onboarding_completed": {
+      "title": "Onboarding completado",
+      "content": "Has completado con éxito el proceso de onboarding. ¡Bienvenido a bordo!"
+    },
+    "onboarding_in_progress": {
+      "title": "Onboarding en progreso",
+      "content": "Tu proceso de onboarding aún está en progreso. Por favor, complétalo para continuar."
+    },
+    "onboarding_brand_already_exists": {
+      "title": "Onboarding Marca ya existe",
+      "content": "La marca que estás tratando de crear ya existe. Por favor, elige un nombre diferente."
     }
   },
 
