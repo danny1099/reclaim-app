@@ -17,7 +17,7 @@ export const Navbar = ({ child, className, options }: Props) => {
   const { logo = true, brand = true, redirect = true } = options ?? {};
 
   return (
-    <header className={cn("bg-background flex h-16 w-full flex-row items-center px-4 py-2 md:px-24", className)}>
+    <header className={cn("bg-background flex h-16 min-h-16 w-full flex-row items-center px-4 py-2 md:px-24", className)}>
       {logo && (
         <Link href={redirect ? "/" : ""}>
           <Logo showBrand={brand} />

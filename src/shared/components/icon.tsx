@@ -73,6 +73,7 @@ export const iconName = {
   fire: "fire",
   flower: "flower1",
   lightning: "lightning-charge",
+  sound: "soundwave",
 };
 
 export type IconName = keyof typeof iconName;

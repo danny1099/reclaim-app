@@ -1,4 +1,5 @@
 "use client";
+import { useEffect } from "react";
 import { useForm } from "react-hook-form";
 import { useTranslations } from "next-intl";
 import { zodResolver } from "@hookform/resolvers/zod";
@@ -15,8 +16,8 @@ export const FormBrand = () => {
   const form = useForm<BrandSchema>({
     resolver: zodResolver(brandSchema),
     defaultValues: {
-      brand: "",
-      logo: "app:black",
+      brand: store.brand || "",
+      logo: store.logoUrl || "app:black",
     },
   });
 
@@ -25,6 +26,11 @@ export const FormBrand = () => {
     store.setLogoUrl(data.logo || "app:black");
     store.nextStep();
   };
+
+  useEffect(() => {
+    if (store.brand) form.setValue("brand", store.brand);
+    if (store.logoUrl) form.setValue("logo", store.logoUrl);
+  }, []);
 
   return (
     <div className="mt-5 flex h-auto w-full flex-col justify-center px-4 md:w-120">

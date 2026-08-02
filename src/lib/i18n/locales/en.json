@@ -974,12 +974,40 @@
       "brand": {
         "title": "Build your brand",
         "subtitle": "Define the name and logo that will appear in the recovery emails sent to your subscribers."
+      },
+      "voice": {
+        "title": "Define your voice",
+        "subtitle": "Set the tone and style of the recovery emails that will be sent to your subscribers.",
+        "tones": {
+          "preview": "Preview",
+          "close_and_warm": {
+            "label": "Close and Warm",
+            "desc": "How to talk to a friend. Informal, empathetic, and human.",
+            "preview": "Hey {name}, I'm writing because we had a problem with your payment and I want to help you resolve it quickly 🙂"
+          },
+          "professional_and_clear": {
+            "label": "Professional and Clear",
+            "desc": "Direct and respectful. Ideal for B2B or corporate audiences.",
+            "preview": "Dear {name}, we are writing to inform you that your payment could not be processed. Please follow the steps below to resolve this issue."
+          },
+          "direct_and_urgent": {
+            "label": "Direct and Urgent",
+            "desc": "It gets straight to the point. It creates a sense of urgency without being aggressive.",
+            "preview": "{name}, your access is at risk. Update your payment method today to avoid losing your subscription."
+          },
+          "unique_brand_voice": {
+            "label": "Unique brand voice",
+            "desc": "The AI ​​will learn your tone by reading your previous content.",
+            "preview": "The AI ​​will analyze your published content to exactly replicate your writing style."
+          }
+        }
       }
     },
     "form": {
       "name": { "label": "Full name", "placeholder": "Ej. Martina García" },
       "email": { "label": "Email", "placeholder": "Your email address you used to create the Reclaim account" },
       "brand": { "label": "Brand name", "placeholder": "Ej. Reclaim AI, Acme, Dale" },
+      "voice": { "label": "Voice style", "placeholder": "Ej. Friendly, professional, casual" },
       "continue": "Continue with the onboarding",
       "submit-button": "Set up my account",
       "previous": "Go back"

@@ -6,7 +6,7 @@ export const onboardingSchema = z.object({
   avatar: z.string().optional(),
   brand: z.string().min(1, { message: "required" }),
   logo: z.string().optional(),
-  subs_ammount: z.string().min(1, { message: "required" }),
+  style_voice: z.string().min(1, { message: "required" }),
 });
 
 export const infoUserSchema = onboardingSchema.pick({
@@ -20,6 +20,11 @@ export const brandSchema = onboardingSchema.pick({
   logo: true,
 });
 
+export const styleVoiceSchema = onboardingSchema.pick({
+  style_voice: true,
+});
+
 export type OnboardingSchema = z.infer<typeof onboardingSchema>;
 export type InfoUserSchema = z.infer<typeof infoUserSchema>;
 export type BrandSchema = z.infer<typeof brandSchema>;
+export type StyleVoiceSchema = z.infer<typeof styleVoiceSchema>;

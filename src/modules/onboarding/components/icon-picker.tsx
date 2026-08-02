@@ -1,6 +1,6 @@
 "use client";
+import { useState, useEffect } from "react";
 import { useTranslations } from "next-intl";
-import { useState } from "react";
 import { Avatar, Button, Icon, IconName, ImageFromDevice, P } from "@/shared/components";
 import { brandIcons } from "@/modules/onboarding/types";
 import { baseColors, getColor, type Color } from "@/shared/helpers";
@@ -27,6 +27,14 @@ export const IconPicker = ({ value, onChange, className }: AvatarPickerProps) =>
     setSelected({ type: "image", value });
     onChange(value);
   };
+
+  useEffect(() => {
+    if (value.includes(":")) {
+      setSelected({ type: "icon", value });
+    } else {
+      setSelected({ type: "image", value });
+    }
+  }, []);
 
   return (
     <div className={cn("relative mt-3 flex flex-col", className)}>

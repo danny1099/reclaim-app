@@ -96,6 +96,7 @@ model Brand {
   slug         String   @unique
   description  String?
   logo         String?
+  style_tone   String?
   voice        String?
   subs_ammount String?
   userId       String   @unique

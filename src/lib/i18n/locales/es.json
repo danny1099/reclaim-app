@@ -983,12 +983,40 @@
       "brand": {
         "title": "Construye tu marca",
         "subtitle": "Define el nombre y el logo que aparecerán en los emails de recuperación enviados a tus suscriptores."
+      },
+      "voice": {
+        "title": "Define tu voz",
+        "subtitle": "Configura la voz y el tono de tu marca para que la IA genere correos de recuperación que se sientan auténticos.",
+        "tones": {
+          "preview": "Previsualización",
+          "close_and_warm": {
+            "label": "Cercano y cálido",
+            "desc": "Como hablarle a un amigo. Informal, empático y humano.",
+            "preview": "Hey {name}, te escribo porque tuvimos un problema con tu pago y quiero ayudarte a solucionarlo rápido 🙂"
+          },
+          "professional_and_clear": {
+            "label": "Profesional y claro",
+            "desc": "Directo y respetuoso. Ideal para B2B o audiencias corporativas.",
+            "preview": "Estimado(a) {name}, le informamos que su pago no pudo procesarse. A continuación le indicamos los pasos para resolverlo."
+          },
+          "direct_and_urgent": {
+            "label": "Directo y urgente",
+            "desc": "Va directamente al grano. Crea un sentido de urgencia sin ser agresivo.",
+            "preview": "{name}, su acceso está en riesgo. Actualice su método de pago hoy para evitar perder su suscripción."
+          },
+          "unique_brand_voice": {
+            "label": "Voz propia de marca",
+            "desc": "La IA aprenderá tu tono leyendo tus contenidos anteriores.",
+            "preview": "La IA analizará tu contenido publicado para replicar exactamente tu forma de escribir."
+          }
+        }
       }
     },
     "form": {
       "name": { "label": "Nombre completo", "placeholder": "Ej. Martina García" },
       "email": { "label": "Email", "placeholder": "Tu dirección de email con la que creaste la cuenta de Reclaim" },
       "brand": { "label": "Marca", "placeholder": "Ej. Reclaim AI, Acme, Dale" },
+      "voice": { "label": "Estilo de comunicación", "placeholder": "Ej. Amigable, profesional, informal" },
       "continue": "Continuar con el onboarding",
       "submit-button": "Configurar mi cuenta",
       "previous": "Volver"
