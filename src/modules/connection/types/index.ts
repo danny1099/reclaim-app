@@ -1,8 +1,7 @@
-import { Gateway, GatewayConnection as PrismaGatewayConnection } from "@prisma/client";
-
-export interface GatewayConnection extends PrismaGatewayConnection {}
+import { Gateway } from "@prisma/client";
 
 export interface GatewayStatus {
   gateway: Gateway;
-  isConnected: boolean;
+  isActive: boolean;
+  paymentAccountId: string | null;
 }

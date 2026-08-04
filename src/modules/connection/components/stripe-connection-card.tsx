@@ -1,13 +1,11 @@
 import { getTranslations } from "next-intl/server";
 import { Badge, Card, CardContent, CardHeader, Title, Icon, P } from "@/shared/components";
 import { StripeConnectionButton } from "@/modules/connection/components";
+import { trpc } from "@/trpc/server";
 
-interface StripeConnectionCardProps {
-  status: boolean;
-}
-
-export const StripeConnectionCard = async ({ status }: StripeConnectionCardProps) => {
+export const StripeConnectionCard = async () => {
   const t = await getTranslations("connections");
+  const { data } = await trpc.connection.getGatewayStatus({ param: "STRIPE" });
 
   return (
     <Card className="h-full min-h-96 w-full rounded-lg">
@@ -21,9 +19,9 @@ export const StripeConnectionCard = async ({ status }: StripeConnectionCardProps
         <div className="mt-4 flex flex-col items-center">
           <div className="text-muted-foreground flex w-full flex-row items-center gap-2">
             <Title className="text-foreground text-lg">{t("card.stripe.name")}</Title>
-            <Badge variant={status ? "accent" : "ghost"} className="text-3xs flex flex-row items-center gap-1">
+            <Badge variant={data?.isActive ? "accent" : "ghost"} className="text-3xs flex flex-row items-center gap-1">
               <Icon name="node" className="size-3 shrink-0" />
-              {status ? t("card.stripe.connected") : t("card.stripe.disconnected")}
+              {data?.isActive ? t("card.stripe.connected") : t("card.stripe.disconnected")}
             </Badge>
           </div>
           <P className="text-2xs mt-1">{t("card.stripe.description")}</P>
@@ -40,7 +38,7 @@ export const StripeConnectionCard = async ({ status }: StripeConnectionCardProps
           ))}
         </ul>
         <div className="mt-auto mb-3 flex h-fit w-full flex-col items-center gap-5">
-          <StripeConnectionButton text={t("cta-button", { gateway: "Stripe" })} status={status} />
+          <StripeConnectionButton text={t("cta-button", { gateway: "Stripe" })} status={data?.isActive} />
           <div className="mx-auto flex flex-row items-center gap-1">
             <p className="text-muted-foreground text-3xs">{t("card.stripe.powered-by")}</p>
             <img src="/images/logo-stripe.svg" alt="Stripe logo" className="size-8 object-contain" />

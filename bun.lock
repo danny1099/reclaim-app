@@ -45,6 +45,7 @@
         "zustand": "^5.0.14",
       },
       "devDependencies": {
+        "@stripe/cli": "^1.45.0",
         "@tailwindcss/postcss": "^4",
         "@types/node": "^20",
         "@types/react": "^19",
@@ -501,6 +502,18 @@
     "@standard-schema/spec": ["@standard-schema/spec@1.1.0", "", {}, "sha512-l2aFy5jALhniG5HgqrD6jXLi/rUWrKvqN/qJx6yoJsgKhblVd+iqqU4RCXavm/jPityDo5TCvKMnpjKnOriy0w=="],
 
     "@standard-schema/utils": ["@standard-schema/utils@0.3.0", "", {}, "sha512-e7Mew686owMaPJVNNLs55PUvgz371nKgwsc4vxE49zsODpJEnxgxRo2y/OKrqueavXgZNMDVj3DdHFlaSAeU8g=="],
+
+    "@stripe/cli": ["@stripe/cli@1.45.0", "", { "optionalDependencies": { "@stripe/cli-darwin-arm64": "1.45.0", "@stripe/cli-darwin-x64": "1.45.0", "@stripe/cli-linux-arm64": "1.45.0", "@stripe/cli-linux-x64": "1.45.0", "@stripe/cli-win32-x64": "1.45.0" }, "bin": { "stripe": "bin/shim.js" } }, "sha512-MZygbnnGEyTFplMJfHAJDhCDqLs/KDbPcgCtuq1zJX5MhACZqAnQrnNUf+O6DmXSZNpkmMpWGH58hsZkUaCzAQ=="],
+
+    "@stripe/cli-darwin-arm64": ["@stripe/cli-darwin-arm64@1.45.0", "", { "os": "darwin", "cpu": "arm64" }, "sha512-83inKpScQ535PrNJNjMcwmQvxewqDBbV5dXa1/KuXtxq31/vKfw0o/Y8vh7w+3Xj4QLbM0BMPQsa3cOjnVxcCw=="],
+
+    "@stripe/cli-darwin-x64": ["@stripe/cli-darwin-x64@1.45.0", "", { "os": "darwin", "cpu": "x64" }, "sha512-v65Iu9FWlQeBE3FYU1a7AIFmi+/wH5eponeSVx4glUp5XtCN4BJJtlGn0KUgLPQcf6GjhTsxot4zZ+NoNfGr5A=="],
+
+    "@stripe/cli-linux-arm64": ["@stripe/cli-linux-arm64@1.45.0", "", { "os": "linux", "cpu": "arm64" }, "sha512-68qb5jSDtyAVgxl2MwQarmr6A/YvXRy5MHvzCPiQeb7vNgz63EibJVGvz8/m06fGzaghkyuYrbRDFyeJaElnzQ=="],
+
+    "@stripe/cli-linux-x64": ["@stripe/cli-linux-x64@1.45.0", "", { "os": "linux", "cpu": "x64" }, "sha512-1ZhoPpoweYfynqsvhCLlTjZ7lPz5IKtxqAMT5MBy6zrwLRTP9x0T6r8h/jLYL8lRH1c7zC/6X6/XUu2V+r9Bog=="],
+
+    "@stripe/cli-win32-x64": ["@stripe/cli-win32-x64@1.45.0", "", { "os": "win32", "cpu": "x64" }, "sha512-oJ03sktkEnG/HxuOg6i+f9+23tE+YS3ItaniHnnBidAnU204vqz9/Z8mqJA+DtEpBA8fjOp+Jr+8y78QbREJHA=="],
 
     "@swc/core": ["@swc/core@1.15.46", "", { "dependencies": { "@swc/counter": "^0.1.3", "@swc/types": "^0.1.27" }, "optionalDependencies": { "@swc/core-darwin-arm64": "1.15.46", "@swc/core-darwin-x64": "1.15.46", "@swc/core-linux-arm-gnueabihf": "1.15.46", "@swc/core-linux-arm64-gnu": "1.15.46", "@swc/core-linux-arm64-musl": "1.15.46", "@swc/core-linux-ppc64-gnu": "1.15.46", "@swc/core-linux-s390x-gnu": "1.15.46", "@swc/core-linux-x64-gnu": "1.15.46", "@swc/core-linux-x64-musl": "1.15.46", "@swc/core-win32-arm64-msvc": "1.15.46", "@swc/core-win32-ia32-msvc": "1.15.46", "@swc/core-win32-x64-msvc": "1.15.46" }, "peerDependencies": { "@swc/helpers": ">=0.5.17" }, "optionalPeers": ["@swc/helpers"] }, "sha512-Ri3em2mBpq3h2zSPliCYl63otDGqek8PPEfv2nWgRQEbZ/VBCNyypVTVQ6cEbTCXBhy+WE2T3fQb08moIyuYaw=="],
 

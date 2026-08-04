@@ -1,10 +1,11 @@
 "use client";
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { useRouter } from "next/navigation";
 import { Button } from "@/shared/components";
 import { I18nMessage } from "next-intl";
 import { useToast } from "@/shared/hooks";
 import { cn } from "@/shared/utils";
+import { env } from "@/config/env";
 
 interface StripeConnectionButtonProps {
   text: string;
@@ -14,13 +15,25 @@ interface StripeConnectionButtonProps {
 
 export const StripeConnectionButton = ({ text, status, className }: StripeConnectionButtonProps) => {
   const [loading, setLoading] = useState(false);
+  const popupPollRef = useRef<ReturnType<typeof setInterval> | null>(null);
   const router = useRouter();
   const toast = useToast();
+
+  const params = new URLSearchParams({
+    client_id: env.NEXT_PUBLIC_STRIPE_CONNECT_CLIENT_ID,
+    response_type: "code",
+    scope: "read_write",
+  });
 
   useEffect(() => {
     const connectStripeEvent = (event: MessageEvent) => {
       if (event.origin !== window.location.origin) return;
-      if (event.data?.type === "stripe-connect-success") {
+      if (event.data?.type === "connect-gateway-response") {
+        if (popupPollRef.current) {
+          clearInterval(popupPollRef.current);
+          popupPollRef.current = null;
+        }
+
         const { status, message } = event.data;
         const formattedMessage = message || ("unknown_error" as I18nMessage);
 
@@ -31,9 +44,9 @@ export const StripeConnectionButton = ({ text, status, className }: StripeConnec
         }
 
         /* reload the page to show the new connection */
-        setLoading(false);
         router.refresh();
         toast({ message: formattedMessage, type: "success" });
+        setLoading(false);
       }
     };
 
@@ -44,23 +57,30 @@ export const StripeConnectionButton = ({ text, status, className }: StripeConnec
   const handleConnectClick = async () => {
     setLoading(true);
 
-    /* fetch the stripe connect url */
-    const response = await fetch("/api/integrations/stripe/connect");
-    const data = await response.json();
+    const urlRedirect = `https://connect.stripe.com/oauth/authorize?${params}`;
+    const ancho = 650,
+      alto = 700;
+    const left = window.screenX + (window.outerWidth - ancho) / 2;
+    const top = window.screenY + (window.outerHeight - alto) / 2;
 
-    if (data.url) {
-      const ancho = 550;
-      const alto = 700;
-      const left = window.screenX + (window.outerWidth - ancho) / 2;
-      const top = window.screenY + (window.outerHeight - alto) / 2;
+    const popup = window.open(
+      urlRedirect,
+      "StripeConnectPopup",
+      `width=${ancho},height=${alto},top=${top},left=${left},scrollbars=yes,resizable=yes`
+    );
 
-      /* open in a new window */
-      window.open(
-        data.url,
-        "StripeConnectPopup",
-        `width=${ancho},height=${alto},top=${top},left=${left},padding=20px,scrollbars=yes,resizable=yes`
-      );
+    if (!popup) {
+      setLoading(false);
+      return;
     }
+
+    popupPollRef.current = setInterval(() => {
+      if (popup.closed) {
+        clearInterval(popupPollRef.current!);
+        popupPollRef.current = null;
+        setLoading(false);
+      }
+    }, 500);
   };
 
   return (

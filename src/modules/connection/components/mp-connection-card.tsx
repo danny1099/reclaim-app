@@ -1,12 +1,10 @@
 import { getTranslations } from "next-intl/server";
 import { Badge, Button, Card, CardContent, CardHeader, Title, Icon, P } from "@/shared/components";
+import { trpc } from "@/trpc/server";
 
-interface MercadoPagoConnectionCardProps {
-  status: boolean;
-}
-
-export const MercadoPagoConnectionCard = async ({ status }: MercadoPagoConnectionCardProps) => {
+export const MercadoPagoConnectionCard = async () => {
   const t = await getTranslations("connections");
+  const { data } = await trpc.connection.getGatewayStatus({ param: "MERCADOPAGO" });
 
   return (
     <Card className="h-full min-h-96 w-full rounded-lg">
@@ -20,9 +18,9 @@ export const MercadoPagoConnectionCard = async ({ status }: MercadoPagoConnectio
         <div className="mt-4 flex flex-col items-center">
           <div className="text-muted-foreground flex w-full flex-row items-center gap-2">
             <Title className="text-foreground text-lg">{t("card.mercadopago.name")}</Title>
-            <Badge variant={status ? "accent" : "ghost"} className="text-3xs -ml-1 flex flex-row items-center gap-1">
+            <Badge variant={data?.isActive ? "accent" : "ghost"} className="text-3xs -ml-1 flex flex-row items-center gap-1">
               <Icon name="node" className="size-3 shrink-0" />
-              {status ? t("card.mercadopago.connected") : t("card.mercadopago.disconnected")}
+              {data?.isActive ? t("card.mercadopago.connected") : t("card.mercadopago.disconnected")}
             </Badge>
           </div>
           <P className="text-2xs mt-1">{t("card.mercadopago.description")}</P>

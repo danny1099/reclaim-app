@@ -6,7 +6,11 @@ import { getPrivateRoute } from "@/routes/utils";
 import { capitalize } from "@/shared/utils";
 import { Button, Icon, P, Title } from "@/shared/components";
 
-export const ConfirmationProcess = ({ gateway }: { gateway: string }) => {
+interface ConfirmationProcessProps {
+  gateway: string;
+}
+
+export const ConfirmationProcess = ({ gateway }: ConfirmationProcessProps) => {
   const t = useTranslations("connections.connect_state");
   const redirectTo = getPrivateRoute("connections");
   const router = useRouter();
@@ -19,7 +23,7 @@ export const ConfirmationProcess = ({ gateway }: { gateway: string }) => {
   useEffect(() => {
     if (window.opener) {
       const response = {
-        type: "gateway-connect-success",
+        type: "connect-gateway-response",
         status: status === "success" ? "success" : "error",
         message: message || null,
       };

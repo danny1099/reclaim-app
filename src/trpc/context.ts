@@ -1,12 +1,14 @@
 import { prisma } from "@/lib/db/prisma";
+import { getAuthSession } from "@/modules/auth/session";
 
 export const createTRPCContext = async (opts: { headers: Headers }) => {
-  const userId = "danny.mosquera";
+  const auth = await getAuthSession();
 
   return {
     ...opts,
     db: prisma,
-    userId: userId,
+    userId: auth?.user.id!,
+    brandId: auth?.user.activeBrandId!,
   };
 };
 

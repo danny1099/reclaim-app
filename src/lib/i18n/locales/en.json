@@ -240,6 +240,30 @@
     "onboarding_brand_already_exists": {
       "title": "Onboarding brand already exists",
       "content": "The brand you are trying to create already exists. Please choose a different name."
+    },
+    "connection_error_on_register": {
+      "title": "Connection error",
+      "content": "There was a connection error while trying to register. Please try again."
+    },
+    "connection_already_exists": {
+      "title": "Connection already exists",
+      "content": "A connection for this payment account and gateway already exists for another user."
+    },
+    "connection_stripe_code_missing": {
+      "title": "Connection failed",
+      "content": "We couldn't find the connection code, please try again."
+    },
+    "connection_stripe_error_token": {
+      "title": "Connection failed",
+      "content": "Response from the gateway is missing required information, please try connecting your account again."
+    },
+    "connection_stripe_created": {
+      "title": "Connection created",
+      "content": "Your account has been connected successfully."
+    },
+    "connection_stripe_deleted": {
+      "title": "Connection deleted",
+      "content": "Your account has been disconnected successfully."
     }
   },
 

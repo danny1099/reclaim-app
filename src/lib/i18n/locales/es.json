@@ -240,6 +240,30 @@
     "onboarding_brand_already_exists": {
       "title": "Onboarding Marca ya existe",
       "content": "La marca que estás tratando de crear ya existe. Por favor, elige un nombre diferente."
+    },
+    "connection_error_on_register": {
+      "title": "Error de conexión",
+      "content": "Hubo un error de conexión mientras se intentaba registrar. Por favor, inténtalo de nuevo."
+    },
+    "connection_already_exists_for_other_user": {
+      "title": "Conexión ya existe",
+      "content": "Una conexión para esta cuenta de pago y pasarela ya existe para otro usuario."
+    },
+    "connection_stripe_code_missing": {
+      "title": "Conexión fallida",
+      "content": "No pudimos encontrar el código de conexión, por favor inténtalo de nuevo."
+    },
+    "connection_stripe_error_token": {
+      "title": "Conexión fallida",
+      "content": "La respuesta del gateway no contiene la información requerida, por favor intenta conectar tu cuenta de nuevo."
+    },
+    "connection_stripe_created": {
+      "title": "Conexión creada",
+      "content": "Tu cuenta ha sido conectada exitosamente."
+    },
+    "connection_stripe_deleted": {
+      "title": "Conexión eliminada",
+      "content": "Tu cuenta ha sido desconectada exitosamente."
     }
   },
 
