@@ -264,6 +264,10 @@
     "connection_stripe_deleted": {
       "title": "Conexión eliminada",
       "content": "Tu cuenta ha sido desconectada exitosamente."
+    },
+    "email_max_copies_reached": {
+      "title": "Max copies reached",
+      "content": "You have reached the maximum number of email copies allowed for this sequence."
     }
   },
 

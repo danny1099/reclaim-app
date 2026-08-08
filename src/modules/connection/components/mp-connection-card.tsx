@@ -42,7 +42,7 @@ export const MercadoPagoConnectionCard = async () => {
           </Button>
           <div className="mx-auto -mt-3 flex flex-row items-center gap-1">
             <p className="text-muted-foreground text-3xs">{t("card.mercadopago.powered-by")}</p>
-            <img src="/images/logo-mercadopago.svg" alt="Mercado Pago logo" className="size-14 object-contain" />
+            <img src="/images/logo-mercadopago.svg" alt="Mercado Pago logo" className="-ml-1.5 size-14 object-contain" />
           </div>
         </div>
       </CardContent>

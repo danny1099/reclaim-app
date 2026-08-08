@@ -21,6 +21,7 @@ export const env = createEnv({
     STRIPE_CONNECT_WEBHOOK_SECRET: z.string(),
     UPSTASH_REDIS_REST_URL: z.string(),
     UPSTASH_REDIS_REST_TOKEN: z.string(),
+    IA_MODEL_API_KEY: z.string(),
   },
   client: {
     NEXT_PUBLIC_STRIPE_CONNECT_CLIENT_ID: z.string(),
@@ -44,6 +45,7 @@ export const env = createEnv({
     STRIPE_CONNECT_WEBHOOK_SECRET: process.env.STRIPE_CONNECT_WEBHOOK_SECRET,
     UPSTASH_REDIS_REST_URL: process.env.UPSTASH_REDIS_REST_URL,
     UPSTASH_REDIS_REST_TOKEN: process.env.UPSTASH_REDIS_REST_TOKEN,
+    IA_MODEL_API_KEY: process.env.IA_MODEL_API_KEY,
     NEXT_PUBLIC_STRIPE_CONNECT_CLIENT_ID: process.env.NEXT_PUBLIC_STRIPE_CONNECT_CLIENT_ID,
   },
   emptyStringAsUndefined: true,

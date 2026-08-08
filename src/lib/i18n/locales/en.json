@@ -264,6 +264,14 @@
     "connection_stripe_deleted": {
       "title": "Connection deleted",
       "content": "Your account has been disconnected successfully."
+    },
+    "email_max_copies_reached": {
+      "title": "Max copies reached",
+      "content": "You have reached the maximum number of email copies allowed for this sequence."
+    },
+    "email_variant_stack_missing": {
+      "title": "Email variants Missing",
+      "content": "The stack variants email is missing, contact support"
     }
   },
 
